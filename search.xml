@@ -8,7 +8,7 @@
       <link href="2021/02/10/update_butterfly_3.6.2/"/>
       <url>2021/02/10/update_butterfly_3.6.2/</url>
       
-        <content type="html"><![CDATA[<p>在2021年春节无聊期间把博客升级了一下，参考<a href="https://butterfly.js.org/">官方文档</a>重新新建了一个blog文件夹升级到Butterfly3.6.2版，然后deploy到GitHub上直接覆盖了原来的blog文件夹实现。</p><p>并且做了部分在上一版中没有试过的美化/优化/魔改，参考了以下教程，特此记录：</p><ul><li><a href="https://imszz.com/p/ffb5990d/">Valine引用B站表情</a></li><li><a href="https://imszz.com/p/c4492888/">Valine添加自定义邮件提醒</a></li><li><a href="https://akilar.top/posts/d2222705/">Valine 评论添加 “博主，小伙伴，访客” 标签</a></li><li><a href="https://blog.zhheo.com/p/2e6bbbd0.html">Twikoo评论系统配置教程（基于腾讯云开发）</a></li><li><a href="https://snow.js.org/butterfly-aplayer/">Butterfly：添加全局吸底 Aplayer 播放器</a></li><li><a href="https://blog.slqwq.cn/2021/posts/bbr35lia">添加PACE加载进度条</a></li><li><a href="https://zfe.space/post/65396.html">教程：Butterfly主题的一图流和视频流背景修改方法</a></li><li><a href="https://www.antmoe.com/posts/7198453/index.html">Hexo 博客之 butterfly 主题优雅更换背景</a></li></ul><p>P.S. 在寻找教程过程中，从作者Jerry本人的友链里发现了一堆魔改的大佬，然后顺着这些大佬的友链欣赏了很多优化的优秀博客作品，以及在他们的友链里发现了更多的大佬。同时在这些大佬中也发现了不少已经成功跨过校招的独木桥拿到offer的同龄人，我觉得接下来的工作就是一个接着一个博客去膜（shi）拜（jian）学习一下了。</p>]]></content>
+        <content type="html"><![CDATA[<p>在2021年春节无聊期间把博客升级了一下，参考<a href="https://butterfly.js.org/">官方文档</a>重新新建了一个blog文件夹升级到Butterfly3.6.2版，然后deploy到GitHub上直接覆盖了原来的blog文件夹实现。</p><p>并且做了部分在上一版中没有试过的美化/优化/魔改，参考了以下教程，特此记录：</p><ul><li><a href="https://imszz.com/p/ffb5990d/">Valine引用B站表情</a></li><li><a href="https://imszz.com/p/c4492888/">Valine添加自定义邮件提醒</a></li><li><a href="https://akilar.top/posts/d2222705/">Valine 评论添加 “博主，小伙伴，访客” 标签</a></li><li><a href="https://blog.zhheo.com/p/2e6bbbd0.html">Twikoo评论系统配置教程（基于腾讯云开发）</a></li><li><a href="https://snow.js.org/butterfly-aplayer/">Butterfly：添加全局吸底 Aplayer 播放器</a></li><li><a href="https://blog.slqwq.cn/2021/posts/bbr35lia">添加PACE加载进度条</a></li><li><a href="https://zfe.space/post/65396.html">教程：Butterfly主题的一图流和视频流背景修改方法</a></li><li><a href="https://www.antmoe.com/posts/7198453/index.html">Hexo 博客之 butterfly 主题优雅更换背景</a></li><li><a href="https://waline.js.org/quick-start.html">valine改用waline</a></li><li><a href="https://akilar.top/posts/bbf68ad4/">平滑升级魔改后的 Hexo 主题</a>（码一个，下次用）</li></ul><p>P.S. 在寻找教程过程中，从作者Jerry本人的友链里发现了一堆魔改的大佬，然后顺着这些大佬的友链欣赏了很多优化的优秀博客作品，以及在他们的友链里发现了更多的大佬。同时在这些大佬中也发现了不少已经成功跨过校招的独木桥拿到offer的同龄人，我觉得接下来的工作就是一个接着一个博客去膜（shi）拜（jian）学习一下了。</p>]]></content>
       
       
       <categories>
@@ -696,9 +696,9 @@
             
             <tag> 可视化 </tag>
             
-            <tag> 点击流 </tag>
-            
             <tag> 相似度 </tag>
+            
+            <tag> 点击流 </tag>
             
         </tags>
       
