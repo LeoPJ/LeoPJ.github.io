@@ -1,19 +1,19 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大数据学习笔记——Linux相关操作 | Cuper's Blog</title><meta name="keywords" content="大数据,MOOC笔记,Linux"><meta name="author" content="Cuper"><meta name="copyright" content="Cuper"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="参考教程B站视频：尚硅谷大数据Linux教程(大数据linux开发) 视频评论区的学习笔记 Linux的文件目录结构在Linux的世界里，一切皆文件。   &#x2F;bin (&#x2F;usr&#x2F;bin 、&#x2F;usr&#x2F;local&#x2F;bin)：是Binary的缩写，这个目录存放着最经常使用的命令。  &#x2F;sbin (&#x2F;usr&#x2F;sbin 、&#x2F;usr&#x2F;local&#x2F;sbin)：s就是Super User的意思，这里存放的是系统管">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大数据可视化技术调研报告 | Cuper's Blog</title><meta name="keywords" content="大数据,Hadoop,可视化"><meta name="author" content="Cuper"><meta name="copyright" content="Cuper"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="功能需求（拟定） 实时监控并展示服务器中的Hadoop集群运行状况，包括节点进程的运行与通信日志（报错的捕捉与报警）、存储空间的变化、配置文件信息等。 数据信息的图形化展示，展示数据库与数据表的信息（比如）， 交互式的数据分析，封装好一些常用的SQL查询，能够在图形化界面操作直接展示表格与图形结果；封装一些数据分析算法并提供数据输入和参数设定的接口，能根据不同的数据源和参数选择实时运行出不同的实验">
 <meta property="og:type" content="article">
-<meta property="og:title" content="大数据学习笔记——Linux相关操作">
-<meta property="og:url" content="http://blog.cuper.top/2020/12/02/Linux_note/index.html">
+<meta property="og:title" content="大数据可视化技术调研报告">
+<meta property="og:url" content="http://blog.cuper.top/2021/01/24/big_data_vis/index.html">
 <meta property="og:site_name" content="Cuper&#39;s Blog">
-<meta property="og:description" content="参考教程B站视频：尚硅谷大数据Linux教程(大数据linux开发) 视频评论区的学习笔记 Linux的文件目录结构在Linux的世界里，一切皆文件。   &#x2F;bin (&#x2F;usr&#x2F;bin 、&#x2F;usr&#x2F;local&#x2F;bin)：是Binary的缩写，这个目录存放着最经常使用的命令。  &#x2F;sbin (&#x2F;usr&#x2F;sbin 、&#x2F;usr&#x2F;local&#x2F;sbin)：s就是Super User的意思，这里存放的是系统管">
+<meta property="og:description" content="功能需求（拟定） 实时监控并展示服务器中的Hadoop集群运行状况，包括节点进程的运行与通信日志（报错的捕捉与报警）、存储空间的变化、配置文件信息等。 数据信息的图形化展示，展示数据库与数据表的信息（比如）， 交互式的数据分析，封装好一些常用的SQL查询，能够在图形化界面操作直接展示表格与图形结果；封装一些数据分析算法并提供数据输入和参数设定的接口，能根据不同的数据源和参数选择实时运行出不同的实验">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://img.cuper.top/java20201229203059.png">
-<meta property="article:published_time" content="2020-12-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-01-05T06:10:53.228Z">
+<meta property="og:image" content="http://img.cuper.top/java20210224002854.jpg">
+<meta property="article:published_time" content="2021-01-23T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-02-23T16:29:04.146Z">
 <meta property="article:author" content="Cuper">
 <meta property="article:tag" content="大数据">
-<meta property="article:tag" content="MOOC笔记">
-<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Hadoop">
+<meta property="article:tag" content="可视化">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://img.cuper.top/java20201229203059.png"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://blog.cuper.top/2020/12/02/Linux_note/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+<meta name="twitter:image" content="http://img.cuper.top/java20210224002854.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://blog.cuper.top/2021/01/24/big_data_vis/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?9c131ecdfe63da17401063a89624e177";
@@ -70,7 +70,7 @@ gtag('config', 'UA-167103144-2');
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2021-01-05 14:10:53'
+  postUpdate: '2021-02-24 00:29:04'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -176,370 +176,251 @@ gtag('config', 'UA-167103144-2');
     if (fontSizeVal !== undefined) {
       document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
     }
-    })(window)</script><style type="text/css">#toggle-sidebar {bottom: 80px}</style><link rel="stylesheet" href="/css/background.css"><link rel="stylesheet" href="/css/copyright.css"><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="http://img.cuper.top/asuka.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">48</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文库</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 分享</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/bangumis/"><i class="fa-fw fas fa-tv"></i><span> 番剧</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://www.kaspersky.com/content/en-global/images/repository/isc/2017-images/linux.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Cuper's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文库</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 分享</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/bangumis/"><i class="fa-fw fas fa-tv"></i><span> 番剧</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">大数据学习笔记——Linux相关操作</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-01T16:00:00.000Z" title="发表于 2020-12-02 00:00:00">2020-12-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-01-05T06:10:53.228Z" title="更新于 2021-01-05 14:10:53">2021-01-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Linux/">Linux</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">6.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>21分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ZW411k7Qh?p=1">B站视频：尚硅谷大数据Linux教程(大数据linux开发)</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44262126/article/details/108217320">视频评论区的学习笔记</a></p>
-<h1 id="Linux的文件目录结构"><a href="#Linux的文件目录结构" class="headerlink" title="Linux的文件目录结构"></a>Linux的文件目录结构</h1><p><strong>在Linux的世界里，一切皆文件。</strong></p>
-<p><img src="http://img.cuper.top/bigdata20200824201738718.png" alt="20200824201738718"></p>
+    })(window)</script><style type="text/css">#toggle-sidebar {bottom: 80px}</style><link rel="stylesheet" href="/css/background.css"><link rel="stylesheet" href="/css/copyright.css"><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="http://img.cuper.top/asuka.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">48</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文库</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 分享</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/bangumis/"><i class="fa-fw fas fa-tv"></i><span> 番剧</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://img.cuper.top/java20210224002834.jfif')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Cuper's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文库</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 分享</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/bangumis/"><i class="fa-fw fas fa-tv"></i><span> 番剧</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">大数据可视化技术调研报告</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-01-23T16:00:00.000Z" title="发表于 2021-01-24 00:00:00">2021-01-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-02-23T16:29:04.146Z" title="更新于 2021-02-24 00:29:04">2021-02-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>14分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="功能需求（拟定）"><a href="#功能需求（拟定）" class="headerlink" title="功能需求（拟定）"></a>功能需求（拟定）</h1><ul>
+<li>实时监控并展示服务器中的Hadoop集群运行状况，包括节点进程的运行与通信日志（报错的捕捉与报警）、存储空间的变化、配置文件信息等。</li>
+<li>数据信息的图形化展示，展示数据库与数据表的信息（比如），</li>
+<li>交互式的数据分析，封装好一些常用的SQL查询，能够在图形化界面操作直接展示表格与图形结果；封装一些数据分析算法并提供数据输入和参数设定的接口，能根据不同的数据源和参数选择实时运行出不同的实验结果。</li>
+<li>提供自定义代码入口，在以后的研究中可以随时添加尚未封装进去的新的数据分析功能。</li>
+</ul>
+<h1 id="大数据VS传统可视化"><a href="#大数据VS传统可视化" class="headerlink" title="大数据VS传统可视化"></a>大数据VS传统可视化</h1><ul>
+<li><p>面向的数据对象：大数据可视化工具必须能够处理半结构化和非结构化数据（大数据通常具有这种格式）</p>
+</li>
+<li><p>维度选择：需要做到精确，如果减小维度以使可视化程度降低，则可能最终会丢失有用的模式，但是如果使用所有维度，最终可能会导致可视化过于密集而无法用于可视化。</p>
+</li>
+<li><p>实时性：必须适应大数据的爆炸式增长需求，必须快速地收集分析数据、并对数据信息进行实时更新。</p>
+</li>
+<li><p>多种数据集成支持方式：大数据的数据来源不仅仅局限于数据库，数据可视化工具需要能够支持团队协作数据、数据仓库、文本等多种方式，并能够通过互联网进行展现。</p>
+</li>
+</ul>
+<h1 id="数据可视化工具"><a href="#数据可视化工具" class="headerlink" title="数据可视化工具"></a>数据可视化工具</h1><h2 id="汇总"><a href="#汇总" class="headerlink" title="汇总"></a>汇总</h2><p><a target="_blank" rel="noopener" href="https://iclient.supermap.io/web/books/modern-web-gis-in-action/da-shu-ju-ke-shi-hua-ji-zhu/da-shu-ju-ke-shi-hua-chang-yong-gong-ju.html">参考来源</a></p>
+<table>
+<thead>
+<tr>
+<th align="left">开源工具</th>
+<th align="left">商业工具</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Processing</td>
+<td align="left">Tableau</td>
+</tr>
+<tr>
+<td align="left">Many Eyes</td>
+<td align="left">Spotfire（TIBCO）</td>
+</tr>
+<tr>
+<td align="left">D3.js</td>
+<td align="left">QlikView</td>
+</tr>
+<tr>
+<td align="left">R（基础包、lattice、ggplot2）</td>
+<td align="left">FineBI</td>
+</tr>
+<tr>
+<td align="left">ECharts</td>
+<td align="left">SAS Visual Analytics</td>
+</tr>
+<tr>
+<td align="left">Google Charts</td>
+<td align="left">Adobe Illustrator</td>
+</tr>
+<tr>
+<td align="left">Flot</td>
+<td align="left">HighCharts</td>
+</tr>
+<tr>
+<td align="left">Gephi</td>
+<td align="left">iCharts</td>
+</tr>
+<tr>
+<td align="left">Envision.js</td>
+<td align="left">Jolicharts</td>
+</tr>
+<tr>
+<td align="left">Prefuse</td>
+<td align="left">Dundas Chart</td>
+</tr>
+<tr>
+<td align="left">Arbor.js</td>
+<td align="left">LightningChart</td>
+</tr>
+<tr>
+<td align="left">Chart.js</td>
+<td align="left">Microsoft Excel</td>
+</tr>
+<tr>
+<td align="left">Paper.js</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">NodeBox</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h2 id="部分开源工具"><a href="#部分开源工具" class="headerlink" title="部分开源工具"></a>部分开源工具</h2><h3 id="D3-js"><a href="#D3-js" class="headerlink" title="D3.js"></a><a target="_blank" rel="noopener" href="https://d3js.org/">D3.js</a></h3><p>优点：免费的JavaScript库，可以将任意数据连接到HTML的文档对象模型（DOM），然后将数据驱动的转换应用于文档，通过DOM编程API可以将文档作为对象访问。支持用于交互和动画的大型数据集和动态行为，开发时可以通过浏览器的内置元素检查器进行调试。</p>
+<p>缺点：入门需要花费的时间较多</p>
+<p>适用于擅长JavaScript，SVG或DOM的开发人员。</p>
+<h3 id="plotly"><a href="#plotly" class="headerlink" title="plotly"></a><a target="_blank" rel="noopener" href="https://plotly.com/">plotly</a></h3><p>优点：用于创建图表和基于浏览器的开源Python图形库。可称为高级图表库，因为它是内置于D3.js库的顶部。可以使用该工具通过上载CSV文件或连接到SQL数据库来创建D3.js图表和地图。导出图片的质量较高，图形界面完全交互式。Plotly可以提供比较少见的图表，比如等高线图、烛台图（K线图）和3D图表，而大多数工具都没有这些图表。此外，Plotly的团队还维护着增长飞快的R、Python以及JavaScript的开源可视化库。</p>
+<p>缺点：它不涉及jQuery，仅限于原始的JavaScript，需要API密钥和注册而不是pip安装。</p>
+<p>适用于擅长Python的开发人员</p>
+<h3 id="RawGraphs"><a href="#RawGraphs" class="headerlink" title="RawGraphs"></a><a target="_blank" rel="noopener" href="https://rawgraphs.io/">RawGraphs</a></h3><p>优点：目标是构建电子表格和矢量图形编辑器之间的链接，可以可视化TSV，CSV，DSV或JSON数据，有助于将数据转换为图表。数据导入的过程像复制粘贴一样简单，上传到RAW的数据将仅由Web浏览器处理，保证数据安全。</p>
+<p>缺点：大多数图表的目的不明确（没有基本的线条图），需要开发人员来开发自定义图表。</p>
+<h3 id="Candela"><a href="#Candela" class="headerlink" title="Candela"></a><a target="_blank" rel="noopener" href="https://candela.readthedocs.io/en/latest/">Candela</a></h3><p>带有一个标准化API，可用于实际数据科学应用程序，并且可以通过Resonant平台使用。</p>
+<h3 id="Sigmajs"><a href="#Sigmajs" class="headerlink" title="Sigmajs"></a><a target="_blank" rel="noopener" href="http://sigmajs.org/">Sigmajs</a></h3><p>Sigmajs是一个交互式可视化JavaScript函数库，专门用于制作关系网络图。Sigmajs可以在网页上显示社交关系脉络，在大数据社交网络可视化中非常重要。Sigmajs还支持展示从Gephi导出的图表，可以使用Sigmajs将这些图表直接展示在网页上。</p>
+<h3 id="AntV"><a href="#AntV" class="headerlink" title="AntV"></a><a target="_blank" rel="noopener" href="https://antv.gitee.io/zh">AntV</a></h3><p>是蚂蚁集团研发的一个可视化控件解决方案，包括了可视化图形语法、可视化引擎、图分析工具和地理空间数据的可视化框架等。从它的官网可以了解到现在阿里系的产品（支付宝、淘宝等）里的可视化都基于AntV开发。</p>
+<h3 id="ECharts"><a href="#ECharts" class="headerlink" title="ECharts"></a><a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/index.html">ECharts</a></h3><p>基于Canvas的纯Javascript的图表库，提供直观、生动、可交互、可个性化定制的数据可视化图表。ECharts 提供了常规的<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-line">折线图</a>、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-bar">柱状图</a>、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-scatter">散点图</a>、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-pie">饼图</a>、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-candlestick">K线图</a>，用于统计的<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-boxplot">盒形图</a>，用于地理数据可视化的<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-map">地图</a>、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-heatmap">热力图</a>、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-lines">线图</a>，用于关系数据可视化的<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-graph">关系图</a>、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-treemap">treemap</a>、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-sunburst">旭日图</a>，多维数据可视化的<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-parallel">平行坐标</a>，还有用于 BI 的<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-funnel">漏斗图</a>，<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-gauge">仪表盘</a>，并且支持图与图之间的混搭。并且有深度的交互式数据探索，可以对数据进行多维度数据筛取、视图缩放、展示细节等交互操作。与D3.js相比，ECharts由百度团队研发，中文文档比较清晰，相对来说上手难度更低一点。</p>
+<h3 id="D3-js与ECharts的对比"><a href="#D3-js与ECharts的对比" class="headerlink" title="D3.js与ECharts的对比"></a>D3.js与ECharts的对比</h3><p>这两个工具是目前各大公司的大数据平台最流行使用的图形库。</p>
+<h4 id="D3-js（基于SVG）"><a href="#D3-js（基于SVG）" class="headerlink" title="D3.js（基于SVG）"></a>D3.js（基于SVG）</h4><ul>
+<li><p>太底层，学习成本大</p>
+</li>
+<li><p>兼容到IE9以上以及所有的主流浏览器</p>
+</li>
+<li><p>D3通过svg来绘制图形</p>
+</li>
+<li><p>可以自定义事件</p>
+</li>
+<li><p>SVG：不依赖分辨率；基于xml绘制图形，可以操作dom；支持事件处理器；但复杂度高，会减慢页面的渲染速度。</p>
+</li>
+</ul>
+<h4 id="ECharts（基于canvas）"><a href="#ECharts（基于canvas）" class="headerlink" title="ECharts（基于canvas）"></a>ECharts（基于canvas）</h4><ul>
+<li>封装好的方法直接调用</li>
+<li>兼容到ie6以及以上的所有主流浏览器</li>
+<li>echarts通过canvas来绘制图形</li>
+<li>封装好的，直接用，不能修改</li>
+<li>canvas：依赖分辨率；基于js绘制图形；不支持事件处理器；能以png或者jpg的格式保存图片</li>
+</ul>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>一般的数据交互，后台返回数据，前端将数据通过图表的形式展示给用户，对于这种只是展示数据的话较常用的是ECharts。而像一些鼠标、键盘、触屏事件操作的话，是用D3.js实现的。</p>
+<h1 id="部分互联网公司的商用产品"><a href="#部分互联网公司的商用产品" class="headerlink" title="部分互联网公司的商用产品"></a>部分互联网公司的商用产品</h1><h2 id="RayData"><a href="#RayData" class="headerlink" title="RayData"></a><a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/raydata">RayData</a></h2><p>腾讯开发的大数据可视交互系统，核心技术基于<a target="_blank" rel="noopener" href="https://www.ventuz.com/">Ventuz</a>开发。</p>
+<h2 id="Sugar"><a href="#Sugar" class="headerlink" title="Sugar"></a><a target="_blank" rel="noopener" href="https://cloud.baidu.com/product/sugar.html">Sugar</a></h2><p>百度开发的自助BI报表分析和制作可视化数据大屏的强大工具，组件丰富，无需SQL和任何编码。</p>
+<h2 id="DataV"><a href="#DataV" class="headerlink" title="DataV"></a><a target="_blank" rel="noopener" href="https://www.alibabacloud.com/zh/product/datav">DataV</a></h2><p>阿里开发的用于实时数据大屏追踪业务全貌的可视化产品，属于拖拽式可视化工具，专精于业务数据与地理信息融合的大数据可视化。核心技术采用了Blink（是阿里巴巴内部的Apache Flink版本代号）。在GitHub上有同款的开源的<a target="_blank" rel="noopener" href="https://github.com/DataV-Team/DataV">Vue数据可视化组件库</a>。</p>
+<h2 id="网易有数"><a href="#网易有数" class="headerlink" title="网易有数"></a><a target="_blank" rel="noopener" href="https://youdata.163.com/">网易有数</a></h2><p>网易研发的面向企业客户的可视化敏捷BI产品，在网易系产品里有使用。</p>
+<h2 id="FineBI"><a href="#FineBI" class="headerlink" title="FineBI"></a><a target="_blank" rel="noopener" href="https://www.finebi.com/">FineBI</a></h2><h3 id="技术架构："><a href="#技术架构：" class="headerlink" title="技术架构："></a>技术架构：</h3><p>Java开发</p>
+<p>后端：spring mvc + Hibernate</p>
+<p>前端：fineui</p>
+<h3 id="适用范围"><a href="#适用范围" class="headerlink" title="适用范围"></a>适用范围</h3><ul>
+<li>开发/数据人员准备好数据，数据人员/业务人员分析。</li>
+<li>业务人员完全可自行分析、制作可视化。整个数据分析流程分工明确。</li>
+</ul>
+<h3 id="可视化水平"><a href="#可视化水平" class="headerlink" title="可视化水平"></a>可视化水平</h3><ul>
+<li>支持的图表类型多，达47种</li>
+<li>图表可视化选项少，例如，数据格式选项偏少，如需添加，需要修改配置文件</li>
+<li>可在看板中添加筛选框，支持在不同条件下查看</li>
+<li>不支持图表和看板分组管理</li>
+<li>没有提供图表的下钻功能，不支持多图表间的复杂联动</li>
+<li>不支持跨库的表关联查询</li>
+</ul>
+<h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><p>互联网公司的商用产品均大同小异，均有常用的图表和地理信息图。</p>
+<p>百度的Sugar提供的行业模板很少，支持的数据源类型较少，尤其不支持静态数据，不方便调试；操作的便捷性上有很多细节需要完善，如不支持元素多选、对齐等操作，无法去掉表格的表头等。在3D方面尚有不足，没有阿里云DataV、腾讯RayData的3D效果突出，但是有ECharts的加持，报表渲染比较流畅。</p>
+<p>阿里的DataV常用于数据大屏展示，若没有这个方面需求的话该优势可以忽略。相比之下RayData的大屏产品能力较弱，但有原厂服务+框架服务，优势在于三维城市场景方面。</p>
+<h1 id="基于Hadoop的开源可视化项目"><a href="#基于Hadoop的开源可视化项目" class="headerlink" title="基于Hadoop的开源可视化项目"></a>基于Hadoop的开源可视化项目</h1><h2 id="Superset"><a href="#Superset" class="headerlink" title="Superset"></a><a target="_blank" rel="noopener" href="https://superset.apache.org/">Superset</a></h2><p>Apache系列里的基于web的开源BI工具，基于python开发的，所以也算是python生态的一员。它的三大特点是：开源、轻量级、图表丰富，需要在网页上创建看板，然后在看板中创建图表，支持连接SQL查询结果来实时展示图形化结果。</p>
+<h3 id="数据库支持"><a href="#数据库支持" class="headerlink" title="数据库支持"></a>数据库支持</h3><p>Superset 是基于 Druid.io 设计的，但是又支持横向到像 SQLAlchemy 这样的常见Python ORM框架上面。</p>
+<p>Druid 是一个基于分布式的快速列式存储，也是一个为BI设计的开源数据存储查询工具。Druid提供了一种实时数据低延迟的插入、灵活的数据探索和快速数据聚合。现有的Druid已经可以支持扩展到TB级别的事件和PB级的数据了，Druid是BI应用的最佳搭档。跟类似产品Hive相比，速度快了很多。</p>
+<p>在数据源上：支持各种数据源，包括Hive、Kylin等。</p>
+<h3 id="产品结构"><a href="#产品结构" class="headerlink" title="产品结构"></a>产品结构</h3><p><img src="https://upload-images.jianshu.io/upload_images/5064459-2537cacc9c47e3b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp"></p>
+<h3 id="开发架构"><a href="#开发架构" class="headerlink" title="开发架构"></a>开发架构</h3><p>整个项目的后端是基于Python的，用到了Flask、Pandas、SqlAlchemy。</p>
+<h4 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h4><ul>
+<li>Flask App Builder(鉴权、CRUD、规则）</li>
+<li>Pandas（分析）</li>
+<li>SqlAlchemy（数据库ORM）<h4 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h4></li>
+<li>借助 FAB 来生成大部分管理界面，而图表或是 SQL 编辑器等对交互性要求很高的界面，则由 React + Redux 来实现</li>
+<li>Web 服务器是一个标准的 WSGI 应用</li>
+<li>用到了npm、react、webpack，意味着可以在手机也可以流畅使用。</li>
+<li>d3 (数据可视化)</li>
+<li>nvd3.org(可重用图表)<h4 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h4></li>
+<li>Superset的可视化目前只支持每次可视化一张表，对于多表join的情况还无能为力</li>
+<li>依赖于数据库的快速响应，如果数据库本身太慢Superset也没什么办法</li>
+<li>语义层的封装还需要完善，因为druid原生只支持部分SQL</li>
+<li>页面样式简单，页面的灵活度不高，不能实现二级联动，调用api接口</li>
+</ul>
+<h3 id="可视化水平-1"><a href="#可视化水平-1" class="headerlink" title="可视化水平"></a>可视化水平</h3><ul>
+<li>支持的图表类型多，达47种</li>
+<li>图表可视化选项少，例如，数据格式选项偏少，如需添加，需要修改配置文件</li>
+<li>可在看板中添加筛选框，支持在不同条件下查看</li>
+<li>不支持图表和看板分组管理</li>
+<li>没有提供图表的下钻功能，不支持多图表间的复杂联动</li>
+<li>不支持跨库的表关联查询</li>
+<li>支持其他图标库扩展</li>
+</ul>
+<h3 id="支持文档"><a href="#支持文档" class="headerlink" title="支持文档"></a>支持文档</h3><ul>
+<li>安装部署和快速入门方面的文档详细</li>
+<li>但具体功能和图表制作方面的介绍文档需要搜索资料</li>
+<li>整体文档资料相当简陋</li>
+</ul>
+<h3 id="适用范围-1"><a href="#适用范围-1" class="headerlink" title="适用范围"></a>适用范围</h3><ul>
+<li>开发/分析人员做好看板，业务人员浏览看板数据</li>
+<li>业务人员可自行编辑图表，查看满足条件的结果</li>
+</ul>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="https://www.datadriven.top/2018/01/17/Apache%20Superset/index.html">Apache Superset</a></p>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000005083953">解密Airbnb 自助BI神器：Superset 颠覆 Tableau</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_26437925/article/details/86550053">企业对SuperSet的改进</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/python_tty/article/details/87865360">superset整体介绍</a></p>
+<h2 id="Metabase"><a href="#Metabase" class="headerlink" title="Metabase"></a><a target="_blank" rel="noopener" href="https://www.metabase.com/">Metabase</a></h2><p>metabase是一款易用、开源、技术成熟、不断并快速迭代的报表系统。使用metabase可以省去很多前后端的开发工作，只需要进行数据清洗计算转存等相关开发。在目前无开发人力的情况下，这是较为完美的BI系统解决方案。适合查看运行数据，业务人员自己就可以做数据分析。</p>
+<h3 id="开发架构-1"><a href="#开发架构-1" class="headerlink" title="开发架构"></a>开发架构</h3><h4 id="前端-1"><a href="#前端-1" class="headerlink" title="前端"></a>前端</h4><p>React + Redux等相关框架写的单页应用，基于yarn的开发环境，webpack构建，加上D3.js作图。</p>
+<h4 id="后端-1"><a href="#后端-1" class="headerlink" title="后端"></a>后端</h4><p>Clojure + RING（中间件） + Compojure（路由框架） + Toucan（ORM框架）</p>
+<h3 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h3><p>支持数据源少（12种），不支持Hive、Kylin（硬伤）</p>
+<h3 id="可视化水平-2"><a href="#可视化水平-2" class="headerlink" title="可视化水平"></a>可视化水平</h3><ul>
+<li>支持的图表类型不如superset多，仅14种</li>
+<li>图表可视化选项多，例如，提供数据格式多，设置灵活</li>
+<li>可在看板中添加筛选框，支持在不同条件下查看</li>
+<li>通过创建集合，支持图表、看板、定时任务分组管理</li>
+<li>提供图表的简单钻取功能，不支持图表间的复杂联动</li>
+<li>不支持跨库的表关联查询</li>
+</ul>
+<h3 id="适用范围-2"><a href="#适用范围-2" class="headerlink" title="适用范围"></a>适用范围</h3><p> 界面漂亮、友好，使用体验好，适合业务人员使用。</p>
+<h3 id="用户评价"><a href="#用户评价" class="headerlink" title="用户评价"></a>用户评价</h3><p>Metabase 的系统切分与模块化做得非常出色，在前端架构方面 Metabase 较为占优。</p>
+<p>提供完整 API 文档的项目，这使得开发者即使完全不会 Clojure，依然可以凭借丰富的 API 与文档完成许多二次开发。</p>
+<p>部署方面，Metabase 提供了 Jar 文件，Mac 应用程序，Docker 镜像等方式可以让使用者在本地快速尝试该项目。而在生产环境中，它提供了如何在 AWS、Heroku、Kubernetes 上部署的详尽文档，资料较为完善。</p>
+<h3 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="https://dumplingbao.github.io/2019/11/04/metabase-bi-dev/">Metabase-BI系列01：二次开发环境(windows)搭建</a></p>
+<h2 id="Redash"><a href="#Redash" class="headerlink" title="Redash"></a><a target="_blank" rel="noopener" href="https://redash.io/">Redash</a></h2><h3 id="开发架构-2"><a href="#开发架构-2" class="headerlink" title="开发架构"></a>开发架构</h3><p><a target="_blank" rel="noopener" href="http://www.dazdata.com/2020/12/02/develope-1/">官方文档</a>里的原话是：Redash采用最新的React和Python Flask技术开发，要求开发人员具备React和Python Flask基础；另外由于后台查询运行在RQ异步队列之上，开发人员必须对RQ和Redis有所了解；OLAP采用的是Postgresql分析型数据库；另外对于开发工具，前端React基本都采用VSCODE，后端可以选择VSCODE或PyCharm，开发人员必须对这些IDE有一定的了解。</p>
+<h4 id="后端-2"><a href="#后端-2" class="headerlink" title="后端"></a>后端</h4><p>后端逻辑：</p>
+<p><img src="https://pic3.zhimg.com/80/v2-50c3f04b9772f0f8f6d3c740a3794b56_720w.jpg"></p>
+<p>Redash 的服务器端是用 Python 来写的，Web 框架以 Flask 为基础，并充分利用了 Flask 的插件生态圈，主要用了以下的组件：</p>
 <ul>
-<li><p><strong>/bin</strong> (/usr/bin 、/usr/local/bin)：是Binary的缩写，这个目录存放着最经常使用的命令。</p>
-</li>
-<li><p>/sbin (/usr/sbin 、/usr/local/sbin)：s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序。</p>
-</li>
-<li><p><strong>/home</strong> ：存放普通用户的主目录， 在linux中每个用户都有一一个自己的目录，一般该目录名是以用户的账号命名的。</p>
-</li>
-<li><p><strong>/root</strong>：该目录为系统管理员，也称作超级权限者的用户主目录。</p>
-</li>
-<li><p>/lib：系统开机所需要最基本的动态连接共享库，其作用类似于Windows里的DLL文件。几乎所有的应用程序都需要用到这些共享库。</p>
-</li>
-<li><p>/lost+found：这个目录一般情况下是空的，当系统非法关机后，这里就存放了一些文件。</p>
-</li>
-<li><p><strong>/etc</strong>：所有的系统管理所需要的配置文件和子目录my.conf。</p>
-</li>
-<li><p><strong>/usr</strong>：这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似于windows下的program files目录。</p>
-</li>
-<li><p><strong>/boot</strong>：存放的是启动Linux时使用 的一些核心文件，包括一些连接文件以及镜像文件。</p>
-</li>
-<li><p>/proc：这个目录是一个虚拟的目录，它是系统内存的映射，访问这个目录来获取系统信息。</p>
-</li>
-<li><p>/srv：service缩写，该目录存放一些服务启动之后需要提取的数据。</p>
-</li>
-<li><p>/sys：这是linux2.6内核的一个很大的变化。该目录下安装了2.6内核中新出现的一个文件系统。</p>
-</li>
-<li><p>/tmp：这个目录是用来存放一些临时文件的。</p>
-</li>
-<li><p>/dev：类似于windows的设备管理器，把所有的硬件用文件的形式存储。</p>
-</li>
-<li><p><strong>/media</strong>：linux系统会自动识别一些设备，例如U盘、光驱等等，当识别后，linux会把识别的设备挂载到这个目录下。</p>
-</li>
-<li><p><strong>/mnt</strong>：系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将外部的存储挂载在/mnt/上，然后进入该目录就可以查看里的内容了。</p>
-</li>
-<li><p>/opt：这是给主机额外安装软件所摆放的目录。如安装ORACLE数据库就可放到该目录下。默认为空。</p>
-</li>
-<li><p><strong>/usr/local</strong>：这是另一个给主机额外安装软件所安装的目录。一般是通过编译源码方式安装的程序。</p>
-</li>
-<li><p><strong>/var</strong>：这个目录中存放着在不断扩充着的东西，习惯将经常被修改的目录放在这个目录下，包括各种日志文件。</p>
-</li>
-<li><p>/selinux [security-enhanced linux] 360：SELinux是一种安全子系统，它能控制程序只能访问特定文件。</p>
-</li>
+<li>API 框架：Flask-RESTful </li>
+<li>数据库：Flask-SQLAlchemy </li>
+<li>认证：Flask-Login</li>
 </ul>
-<h1 id="Vi和Vim编辑器"><a href="#Vi和Vim编辑器" class="headerlink" title="Vi和Vim编辑器"></a>Vi和Vim编辑器</h1><p><img src="http://img.cuper.top/bigdata20200824202314177.png" alt="20200824202314177"></p>
-<p>退出编辑器：</p>
-<ul>
-<li>:w 将缓冲区写入文件，即保存修改</li>
-<li>:wq 保存修改并退出</li>
-<li>:x 保存修改并退出</li>
-<li>:q 退出，如果对缓冲区进行过修改，则会提示</li>
-<li>:q! 强制退出，放弃修改</li>
+<h4 id="前端-2"><a href="#前端-2" class="headerlink" title="前端"></a>前端</h4><p>Redash 的前端是一个纯的单页应用，用 AngularJS（1.5）实现，结构清晰，代码整洁。但众所周知，AngularJS 在 v2 之后做了巨大的架构调整，所以 AngularJS v1的处境就有些尴尬。这和目前 Python 2 的处境类似。短期内不会有问题，长期来讲是个隐患。</p>
+<h3 id="数据源-1"><a href="#数据源-1" class="headerlink" title="数据源"></a>数据源</h3><p>支持数据源比superset少，不支持Kylin</p>
+<h3 id="可视化水平-3"><a href="#可视化水平-3" class="headerlink" title="可视化水平"></a>可视化水平</h3><ul>
+<li>支持的图表类型不如Superset多，仅12种</li>
+<li>图表可视化选项多</li>
+<li>不支持在看板种添加筛选框</li>
+<li>不支持图表和看板分组管理</li>
+<li>没有提供图表的下钻功能，不支持多图表间的复杂联动</li>
+<li>不支持跨库的表关联查询</li>
 </ul>
-<p>部分常用快捷键：</p>
-<ul>
-<li>拷贝当前行 yy, 拷贝当前行向下的5行 5yy, 粘贴 p</li>
-<li>删除当前行 dd , 删除当前行向下的5行 5dd</li>
-<li>查找，命令行下 /关键字，回车查找，再输入n查找下一个</li>
-<li>设置文件的行号 :set nu，取消文件的行号 :set nonu</li>
-<li>使用快捷键到底文档的最末行 G， 最首行 gg</li>
-<li>撤销 u</li>
-<li>将光标移动到指定行 行数+shift+g</li>
+<h3 id="适用范围-3"><a href="#适用范围-3" class="headerlink" title="适用范围"></a>适用范围</h3><p>由于是对SQL查询结果进行可视化，需要开发/分析人员做好看板，业务人员浏览看板数据。</p>
+<p>技术架构：Python + Flask + AngularJS + SQLAlchemy</p>
+<h3 id="参考-2"><a href="#参考-2" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="https://my.oschina.net/u/4016785/blog/4422743">Redash——一个开源Flask项目</a></p>
+<p><a target="_blank" rel="noopener" href="http://guzhenping.com/2019/02/14/Redash-%E4%BA%8C%E6%AC%A1%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/index.html">Redash 二次开发入门</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/31292944">浅析数据查询与可视化工具–Redash</a></p>
+<h2 id="Zeppelin"><a href="#Zeppelin" class="headerlink" title="Zeppelin"></a><a target="_blank" rel="noopener" href="http://zeppelin.apache.org/">Zeppelin</a></h2><p>支持数据驱动、交互式数据分析、协作式文档等特性的基于Web的交互式应用开发引擎，应用以Notebook形式表示，支持Scala、Python、SQL、Markdown、shell等多种语言。严格意义上说，Zeppelin更像是一notebook，而不是一个单纯的BI工具，来自Apache项目。</p>
+<h3 id="开发技术架构"><a href="#开发技术架构" class="headerlink" title="开发技术架构"></a>开发技术架构</h3><p> 交互式数据分析开源框架，支持多种语言， 包括Scala、Python、SparkSQL、Hive、Markdown、Shell等</p>
+<h3 id="适用范围-4"><a href="#适用范围-4" class="headerlink" title="适用范围"></a>适用范围</h3><p>更适合开发人员</p>
+<h3 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h3><p>不支持sql查询</p>
+<h1 id="可视化思路总结"><a href="#可视化思路总结" class="headerlink" title="可视化思路总结"></a>可视化思路总结</h1><ul>
+<li>可以根据开源项目直接进行二次开发，或者仿照开源项目的源码结构自行搭建。</li>
+<li>在开源工具基础上自制工具需要先决定整个页面展现的形式，建议基于一个后台管理系统型界面，加入用户权限管理。</li>
+<li>Hadoop集群运行状况页面：可以采用HUE里的框架，集成服务器里的Hadoop进程的运行状态，在同一个页面里展示。</li>
+<li>数据信息的图形化展示页面：参考vue-big-screen里集成DataV的思路，采用ECharts工具，把生成的图表展示到VUE的一个页面里。</li>
+<li>交互式的数据分析页面：参考Superset里把SQL查询结果图形化的思路，设定调用SQL的时间间隔并持续更新展示在前端的图表。</li>
+<li>自定义代码的功能输入页面：设定一个统一的代码格式，规定输入为xxx数据源，输出为xxx格式的数据表或其他数据结构，在系统中开设一个自定义函数入口。</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/markleaf/p/7808817.html">更多常用快捷键</a></p>
-<h1 id="用户与组"><a href="#用户与组" class="headerlink" title="用户与组"></a>用户与组</h1><p><img src="http://img.cuper.top/bigdataQQ%E6%88%AA%E5%9B%BE20201109103544.png" alt="QQ截图20201109103544"></p>
-<ul>
-<li>用户至少要属于一个组</li>
+<h1 id="参考-3"><a href="#参考-3" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.hackerearth.com/blog/developers/20-free-and-open-source-data-visualization-tools/">20 free and open source data visualization tools</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.finereport.com/en/data-visualization/best-data-visualization-software-free-and-commercial.html">Top 20 Best Data Visualization Software in 2021: Free and Commercial</a></li>
+<li><a target="_blank" rel="noopener" href="https://chn.oversea.cnki.net/KCMS/detail/detail.aspx?dbcode=SCPD&dbname=SCPD2021&filename=CN110110002B&v=sGbyHldQIbsvOQdDmzf65wvZOf0CDKDTROUPXi4q962n3Z2XtIpmFWXsnpmmJcRu">专利：大数据可视化交互系统</a></li>
+<li><a target="_blank" rel="noopener" href="https://chn.oversea.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&dbname=CMFD201701&filename=1016756637.nh&v=YkiL79FbSE6jK3gn9sf1NApfLEp5SIXo94SHNIVinz0JpZUPnRvaJ3t9unIC81ru">基于Hadoop和Django的大数据可视化分析Web系统</a></li>
+<li><a target="_blank" rel="noopener" href="https://chn.oversea.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&dbname=CMFD201602&filename=1016184899.nh&v=G15Yc8rSoa2FFWPWVTRd2gUfSjR%25mmd2Bd28Hp7aelz9YzE2JCAGocSpyxoaw%25mmd2F6mUeAlF">基于Hadoop的数据可视化技术研究与应用</a></li>
+<li><a target="_blank" rel="noopener" href="https://chn.oversea.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&dbname=CMFD201801&filename=1017710746.nh&v=5lfRsn5LXOazdc%25mmd2BiriN6Hkms9VVou2N0GPj532V%25mmd2BPNzhQTjRI7OgF2aPfpwWTbFO">基于Hadoop和D3.JS的互联网+博物馆可视化平台的研究与实现</a></li>
+<li><a target="_blank" rel="noopener" href="https://chn.oversea.cnki.net/KCMS/detail/detail.aspx?dbcode=CMFD&dbname=CMFD201602&filename=1016121522.nh&v=k%25mmd2F%25mmd2BsH9iAIA7QJqVk27iZzynbhRNWvG7GtpEhFuKNI556Du2fOMqRnydXUN6%25mmd2BZn4q">基于hadoop的网站用户行为分析系统设计与实现</a></li>
+<li><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/9262724">The Trend, Hotspots, Frontier and Path of Big Data Visualization Research in China——Based on the Knowledge Graph Analysis of Citespace5.5.R2</a></li>
+<li><a target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/document/7918044">Big data visualization: Tools and challenges</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/felixzh/p/9094700.html">数据可视化的开源方案: Superset vs Redash vs Metabase</a></li>
+<li><a target="_blank" rel="noopener" href="https://dumplingbao.github.io/2019/11/03/metabase-bi-datav/">BI、数据可视化工具浅析整理</a></li>
 </ul>
-<p><strong>用户和组的相关文件：</strong></p>
-<ul>
-<li><strong>/etc/passwd 文件</strong>——用户（user）的配置文件，记录用户的各种信息<br>每行的含义：用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell</li>
-<li><strong>/etc/shadow 文件</strong>——口令的配置文件<br>每行的含义：登录名:加密口令:最后一次修改时间:最小时间间隔:最大时间间隔:警告时间:不活动时间:失效时间:保留</li>
-<li><strong>/etc/group 文件</strong>——组(group)的配置文件，记录Linux包含的组的信息<br>每行的含义：组名:口令:组标识号:组内用户列表（一般是看不到的）</li>
-</ul>
-<h1 id="运行级别"><a href="#运行级别" class="headerlink" title="运行级别"></a>运行级别</h1><p><img src="http://img.cuper.top/bigdataQQ%E6%88%AA%E5%9B%BE20201109145201.png" alt="QQ截图20201109145201"></p>
-<p>常用的运行级别是3和5。在主界面下的运行级别就是5，用Xshell等远程连接工具登录就是3。如果要修改默认的运行级别，可通过vim来修改/ect/inittab文件中的 id:5:initdefault: 这一行中的数字。或者直接在终端的命令行输入：init 5。</p>
-<h1 id="找回root密码"><a href="#找回root密码" class="headerlink" title="找回root密码"></a>找回root密码</h1><p>启动时-&gt;快速输入 enter-&gt;输入 e-&gt; 进入到编辑界面-&gt; 选择中间有 kernel 项-&gt;输入 e(edit)-&gt; 在该行的最后写入 1 [表示修改内核，临时生效]-&gt; 输入 enter-&gt;输入 b [boot]-&gt; 进入到单用模式，即可直接设置root新密码。</p>
-<blockquote>
-<p>前提：必须在操作系统所在电脑中操作，远程登陆不行。</p>
-</blockquote>
-<h1 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h1><h2 id="帮助指令"><a href="#帮助指令" class="headerlink" title="帮助指令"></a>帮助指令</h2><h3 id="man-命令或者配置文件"><a href="#man-命令或者配置文件" class="headerlink" title="man [命令或者配置文件]"></a>man [命令或者配置文件]</h3><h3 id="help-命令"><a href="#help-命令" class="headerlink" title="help [命令]"></a>help [命令]</h3><h2 id="文件目录类指令"><a href="#文件目录类指令" class="headerlink" title="文件目录类指令"></a>文件目录类指令</h2><h3 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h3><p>该命令行的意思就是print working directory，显示当前工作目录的绝对路径。</p>
-<h3 id="ls-选项-显示当前目录下的文件和目录"><a href="#ls-选项-显示当前目录下的文件和目录" class="headerlink" title="ls [选项] 显示当前目录下的文件和目录"></a>ls [选项] 显示当前目录下的文件和目录</h3><p><strong>选项：</strong></p>
-<ul>
-<li>-a ：显示当前目录所有的文件和目录，包括隐藏的 (文件名以.开头就是隐藏，默认是不显示的)</li>
-<li>-l ： 以列表的方式显示信息</li>
-<li>-h ： 显示文件大小时，以 k , m, G 单位显示</li>
-</ul>
-<h3 id="touch-文件名-文件名-……"><a href="#touch-文件名-文件名-……" class="headerlink" title="touch [文件名] [文件名] ……"></a>touch [文件名] [文件名] ……</h3><p>创建一个或者多个空文件，如果文件存在，则刷新文件的修改时间</p>
-<h3 id="rm-rf-空目录或者非空目录"><a href="#rm-rf-空目录或者非空目录" class="headerlink" title="rm -rf [空目录或者非空目录]"></a>rm -rf [空目录或者非空目录]</h3><p>删除空或者非空目录，其中选项r表示文件与子目录全部删除，f表示全部删除，不需要询问</p>
-<h3 id="cat-选项-n表示显示行号-要查看的文件"><a href="#cat-选项-n表示显示行号-要查看的文件" class="headerlink" title="cat [选项 -n表示显示行号] 要查看的文件"></a>cat [选项 -n表示显示行号] 要查看的文件</h3><p>以只读形式打开文件</p>
-<p>为浏览方便，带上管道命令<code>| more</code>：</p>
-<p><strong>说明：</strong><br>如果需要一行行，输入 enter；<br>如果需要翻页，输入空格键；<br>如果需要退出，输入 q。</p>
-<h3 id="more-文件名"><a href="#more-文件名" class="headerlink" title="more [文件名]"></a>more [文件名]</h3><p>基于vi编辑器的文本过滤器，以全屏幕的方式按页显示文本文件的内容。</p>
-<p><strong>说明：</strong><br>空格键 代表向下翻一页；<br>enter 代表向下翻一行；<br>q 代表立刻离开 more ，不再显示该文件内容；<br>ctrl+F 表示向下滚动一屏；<br>ctrl+B 表示返回上一屏；<br>= 输出当前行的行号；<br>:f 输出文件名和当前行的行号</p>
-<h3 id="less-文件名"><a href="#less-文件名" class="headerlink" title="less [文件名]"></a>less [文件名]</h3><p>和more的功能类似，但不是一次性将整个文件加载进来再显示，而是根据需要再显示，看大型的日志文件一般推荐less。</p>
-<p><strong>说明：</strong><br>空格键、[pagedown] 代表向下翻一页；<br>[pageup] 代表向上翻一页；<br>enter 代表向下翻一行；<br>/[字符串] 代表向下搜寻[字符串] n:向下查找 N:向上查找；<br>?[字符串] 代表向上搜寻[字符串] n:向上查找 N:向下查找；<br>q 离开less这个程序；</p>
-<h3 id="gt-与-gt-gt"><a href="#gt-与-gt-gt" class="headerlink" title="&gt;与&gt;&gt;"></a>&gt;与&gt;&gt;</h3><p>&gt;：输出重定向指令 （会将原来的文件的内容跟覆盖）</p>
-<p>&gt;&gt; ：追加指令 （不会覆盖原来文件的内容，而是追加到文件的尾部）</p>
-<p><code>[命令] &gt;/&gt;&gt; 文件</code>：就是把前面指令在终端里显示的内容写入到后面的文件中，若文件名不存在则创建该文件。</p>
-<p><strong>示例：</strong></p>
-<ul>
-<li>ls -l &gt;sharm.txt （功能描述：列表的内容写入文件sharm.txt中（覆盖写））</li>
-<li>ls -l &gt;&gt;sharm.txt （功能描述：列表的内容追加到文件sharm.txt的末尾）</li>
-</ul>
-<h3 id="echo-PATH"><a href="#echo-PATH" class="headerlink" title="echo $PATH"></a>echo $PATH</h3><p>输出当前的环境变量</p>
-<h3 id="head-n-行数-文件"><a href="#head-n-行数-文件" class="headerlink" title="head [-n 行数] [文件]"></a>head [-n 行数] [文件]</h3><p>用于显示文件的开头部分内容，默认情况显示文件的前10行内容</p>
-<h3 id="tail-n-行数-文件"><a href="#tail-n-行数-文件" class="headerlink" title="tail [-n 行数] [文件]"></a>tail [-n 行数] [文件]</h3><p>用于输出文件中尾部的内容，默认情况显示文件的后10行内容</p>
-<ul>
-<li>tail -f 文件（功能描述：实时追踪该文档的所有更新，命令需要一直运行着，<strong>工作经常用</strong>）</li>
-</ul>
-<h3 id="ln-s-原文件或目录-软链接名"><a href="#ln-s-原文件或目录-软链接名" class="headerlink" title="ln -s [原文件或目录] [软链接名]"></a>ln -s [原文件或目录] [软链接名]</h3><p>给原文件创建一个软链接，软链接也成为符号链接，类似于windows 里的快捷方式，主要存放了链接其他文件的路径，当使用<code>pwd</code>查看目录时，仍然看到的是软链接所在目录。</p>
-<h3 id="history"><a href="#history" class="headerlink" title="history"></a>history</h3><p>查看已经执行过得历史命令，也可以执行历史命令</p>
-<p><code>history 个数n</code>：显示最近使用过的n个指令</p>
-<p><code>!编号</code>：在已经输入history的前提下，执行对应历史编号的指令</p>
-<h2 id="搜索查找类"><a href="#搜索查找类" class="headerlink" title="搜索查找类"></a>搜索查找类</h2><h3 id="find-搜索范围-选项-文件"><a href="#find-搜索范围-选项-文件" class="headerlink" title="find [搜索范围] [选项] [文件]"></a>find [搜索范围] [选项] [文件]</h3><p>find指令是将从指定目录向下递归地遍历其各个子目录，将满足条件的文件或者目录显示在终端。</p>
-<p><img src="http://img.cuper.top/bigdata20200825100316937.png" alt="20200825100316937"></p>
-<ul>
-<li>-size +n大于/-n小于/n等于</li>
-</ul>
-<h3 id="locate-文件名"><a href="#locate-文件名" class="headerlink" title="locate [文件名]"></a>locate [文件名]</h3><p>locate指令可以快速定位文件路径。locate指令利用事先建立的系统中所有文件名称及路径的locate数据库实现快速定位给定的文件。Locate指令无需遍历整个文件系统，查询速度较快。为了保证查询结果的准确度，管理员必须定期更新locate时刻。由于locate指令基于数据库进行查询，所以第一次运行前，必须使用<code>updatedb</code>指令创建locate数据库。</p>
-<h3 id="grep-与管道符“-”"><a href="#grep-与管道符“-”" class="headerlink" title="grep 与管道符“|”"></a>grep 与管道符“|”</h3><p>grep：过滤查找，<code>grep [选项] 查找内容 源文件</code></p>
-<p><strong>grep的选项：</strong><br>-n 显示匹配行及行号；<br>-i 忽略字母大小写；</p>
-<p>|：将前一命令的结果传到后一命令上</p>
-<p><strong>示例：</strong></p>
-<ul>
-<li>grep -n if /home/hello.txt</li>
-<li>cat /home/hello.txt |grep -n if </li>
-<li>两者的作用相同，均是在hello.txt文件中找到if的行号，就像英文中的主动与被动语法</li>
-</ul>
-<h2 id="压缩和解压类"><a href="#压缩和解压类" class="headerlink" title="压缩和解压类"></a>压缩和解压类</h2><h3 id="gzip与gunzip（会删除原文件）"><a href="#gzip与gunzip（会删除原文件）" class="headerlink" title="gzip与gunzip（会删除原文件）"></a>gzip与gunzip（会删除原文件）</h3><p>gzip为压缩文件命令，只能将文件压缩为*.gz文件(不能压缩文件夹)</p>
-<p>gunzip为解压文件命令</p>
-<h3 id="zip与unzip"><a href="#zip与unzip" class="headerlink" title="zip与unzip"></a>zip与unzip</h3><p>可以压缩/解压缩文件&amp;文件夹</p>
-<p><code>zip [选项] xxx.zip 待压缩的内容</code></p>
-<p><strong>选项：</strong></p>
-<p>-r 递归压缩，即压缩目录</p>
-<p><code>unzip [选项] 解压后存放的目录 xxx.zip </code></p>
-<p><strong>选项：</strong></p>
-<p>-d 指定压缩后文件的存放目录</p>
-<p><strong>示例：</strong></p>
-<ul>
-<li>zip -r nn.zip /home/temp/ 将/home目录下的temp文件夹压缩成名为nn.zip的文件，同时保留原文件，注意，要写全，如/home/temp/</li>
-<li>unzip -d /home/haha nn.zip 将nn.zip文件解压到/home/haha中，如果没有该目录，则自动创建该目录</li>
-</ul>
-<h3 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h3><p>tar是打包指令，最后打包后的文件是 .tar.gz 的文件。该命令可以压缩，也可以解压缩</p>
-<p><img src="http://img.cuper.top/bigdata2020082510084565.png" alt="2020082510084565"></p>
-<p><strong>示例：</strong></p>
-<ul>
-<li>tar <strong>-zcvf</strong> a.tar.gz haha.txt mimi.txt 将haha.txt和mimi.txt合并打包为a.tar.gz文件</li>
-<li>tar <strong>-zcvf</strong> myhome.tar.gz /home/ 将/home文件夹下的所有东西打包成一个myhome.tar.gz文件</li>
-<li>tar <strong>-zxvf</strong> a.tar.gz 将z.tar.gz压缩文件解压到该原目录下</li>
-<li>tar <strong>-zxvf</strong> a.tar.gz <strong>-C</strong> /opt/tmp 将a.tar.gz压缩文件解压到/opt/tmp文件夹下，该文件夹需要事先创建</li>
-</ul>
-<h1 id="文件权限管理"><a href="#文件权限管理" class="headerlink" title="文件权限管理"></a>文件权限管理</h1><p>每个文件的权限概念：</p>
-<ul>
-<li>所有者</li>
-<li>所在组</li>
-<li>其他组</li>
-</ul>
-<p><strong>修改文件所有者：</strong><code>chown 用户名 文件名</code></p>
-<p><strong>修改文件所在组：</strong><code>chgrp 组名 文件名</code></p>
-<p><strong>同时修改所有者和所在组：</strong><code>chown 用户名:组名 文件名</code></p>
-<p>参数<code>-R</code>：对目录使其下所有子文件或目录递归生效</p>
-<p><code>ls -alh</code>查看文件信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-rwxrw-r-- 1 root police 1213 Feb 2 09:39 abc.txt</span><br></pre></td></tr></table></figure>
-<ul>
-<li>第0位确定文件类型，其中-:普通文件；d:目录；l:连接文件；c:字符设备文件[键盘,鼠标]；b:块设备文件[硬盘]</li>
-<li>第1-3位确定所有者（该文件的所有者）拥有该文件的权限（r:读权限;w:写权限；x:执行权限）</li>
-<li>第4-6位确定所属组（同用户组的）拥有该文件的权限</li>
-<li>第7-9位确定其他用户拥有该文件的权限</li>
-<li>1:如果是文件，表示硬链接的数目（一般都是1）；如果是目录，则表示有多少个子目录</li>
-<li>root表示所有者名称</li>
-<li>police表示所属组名称</li>
-<li>1213：表示文件存储的大小，如果是目录，则统一为<strong>4096</strong></li>
-<li>Feb 2 09:39表示文件最后的修改时间</li>
-</ul>
-<p><strong>rwx权限详情</strong></p>
-<ul>
-<li><p>rwx作用到文件</p>
-<ul>
-<li>[r]代表可读(read):可以读取,查看</li>
-<li>[w]代表可写(write):可以修改,但是不代表可以删除该文件,删除一个文件的前提条件是对该文件所在的目录有写权限，才能删除该文件</li>
-<li>[x]代表可执行(execute):可以被执行</li>
-</ul>
-</li>
-<li><p>rwx作用到目录</p>
-<ul>
-<li>[r]代表可读(read):可以读取，ls查看目录内容</li>
-<li>[w]代表可写(write):可以修改,目录内创建+删除+重命名目录</li>
-<li>[x]代表可执行(execute):可以进入该目录</li>
-</ul>
-</li>
-</ul>
-<p><strong>修改文件权限：</strong><code>chmod</code></p>
-<ul>
-<li><p>通过+、-、=变更权限（**u:所有者　g:所有组　o:其他人　a:所有人(u,g,o的总和)**）</p>
-<ul>
-<li><code>chmod u=rwx,g=rx,o=x 文件/目录</code> ：给所有者rwx, 给所在组的用户rx, 给其他人x</li>
-<li><code>chmod o+w 文件/目录</code> ：给其它用户增加w的权限</li>
-<li><code>chmod a-x文件/目录</code>：表示：给所有用户去掉x权限</li>
-</ul>
-</li>
-<li><p>通过数字变更权限（<strong>r=4 w=2 x=1 rwx=4+2+1=7</strong>）</p>
-<ul>
-<li><code>chmod u=rwx,g=rx,o=x 文件/目录</code>&amp;<code>chmod 751 文件/目录</code> 两者的功能是相同的</li>
-</ul>
-</li>
-</ul>
-<h1 id="任务调度"><a href="#任务调度" class="headerlink" title="任务调度"></a>任务调度</h1><p>需要自动执行某一个脚本（代码）：需要任务调度</p>
-<p><strong>任务调度的两种方式：</strong><br>1）直接通过命令行来调度<br>2）通过调用脚本来调度<br>本质上两者是相同的，只不过当内容太多时，放在脚本中比较方便。</p>
-<p>命令：<code>crontab [选项]</code></p>
-<p>参数：</p>
-<ul>
-<li>-e 编辑crontab定时任务</li>
-<li>-l 查询crontab任务</li>
-<li>-r 删除当前用户所有的crontab任务</li>
-</ul>
-<p>调度任务格式：<code>占位符(可含参数)+待执行命令</code></p>
-<p>5个占位符说明（记得每个占位符之间要空格）：</p>
-<p><img src="http://img.cuper.top/QQ%E6%88%AA%E5%9B%BE20201208023744.png" alt="QQ截图20201208023744"></p>
-<p>特殊符号作为参数：</p>
-<ul>
-<li>星号 * ：代表任何时间。比如第一个“*”代表一小时中每分钟都执行一次的意思。</li>
-<li>逗号，：代表不连续的时间。比如“0 8,12,16 * * * 命令”，就代表在每天的8点0分，12点0分，16点0分都执行一次命令。</li>
-<li>杠号 - ：代表连续的时间范围。比如“0 5 * * 1-6命令”，代表在周一到周六的凌晨5点0分执行命令。</li>
-<li>*/n： 代表每隔多久执行一次。比如“*/10 * * * * 命令”，代表每隔10分钟就执行一遍命令。</li>
-</ul>
-<blockquote>
-<p>注意：星期几和几号最好不要同时出现，因为它们定义的都是天，非常容易让管理员混乱。</p>
-</blockquote>
-<p><code>service crond restart</code>：重启任务调度</p>
-<h1 id="磁盘分区与挂载"><a href="#磁盘分区与挂载" class="headerlink" title="磁盘分区与挂载"></a>磁盘分区与挂载</h1><h2 id="分区的方式"><a href="#分区的方式" class="headerlink" title="分区的方式"></a>分区的方式</h2><h3 id="mbr分区："><a href="#mbr分区：" class="headerlink" title="mbr分区："></a>mbr分区：</h3><ul>
-<li>最多支持四个主分区</li>
-<li>系统只能安装在主分区</li>
-<li>扩展分区要占一个主分区</li>
-<li>MBR最大只支持2TB，但拥有最好的兼容性</li>
-</ul>
-<h3 id="gpt分区（✔）："><a href="#gpt分区（✔）：" class="headerlink" title="gpt分区（✔）："></a>gpt分区（✔）：</h3><ul>
-<li>支持无限多个主分区（但操作系统可能限制，比如windows下最多128个分区）</li>
-<li>最大支持18EB的大容量（1EB=1024PB，1PB=1024TB）</li>
-<li>windows7 64位以后支持gtp</li>
-</ul>
-<h2 id="Linux与Windows分区的区别"><a href="#Linux与Windows分区的区别" class="headerlink" title="Linux与Windows分区的区别"></a>Linux与Windows分区的区别</h2><p>Windows：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200825102707751.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDI2MjEyNg==,size_16,color_FFFFFF,t_70#pic_center" alt="img"></p>
-<p>Linux：</p>
-<ul>
-<li>对Linux来说无论有几个分区，分给哪一目录使用，它归根结底就只有一个根目录，一个独立且唯一的文件结构，Linux中每个分区都是用来组成整个文件系统的一部分。</li>
-<li>Linux采用了一种叫“载入(mount)”的处理方法，它的整个文件系统中包含了一整套的文件和目录，且将一个分区和一个目录联系起来。这时要载入的一个分区将使它的存储空间在一个目录下获得。</li>
-</ul>
-<h2 id="Linux下磁盘的说明"><a href="#Linux下磁盘的说明" class="headerlink" title="Linux下磁盘的说明"></a>Linux下磁盘的说明</h2><p>Linux硬盘分IDE硬盘和SCSI硬盘，目前基本上是SCSI硬盘。</p>
-<ul>
-<li>对于IDE硬盘，驱动器标识符为“hdx”,其中“hd”表明分区所在设备的类型，这里是指IDE硬盘了。“x”为盘号（a为基本盘，b为基本从属盘，c为辅助主盘，d为辅助从属盘）,“~”代表分区，前四个分区用数字1到4表示，它们是主分区或扩展分区，从5开始就是逻辑分区。例：hda3表示为第一个IDE硬盘上的第三个主分区或扩展分区，hdb2表示为第二个IDE硬盘上的第二个主分区或扩展分区。</li>
-<li>对于SCSI硬盘则标识为“sdx~”，SCSI硬盘是用“sd”来表示分区所在设备的类型的，其余则和IDE硬盘的表示方法一样。sdb1 [表示第2块scsi 硬盘的第1个分区]</li>
-</ul>
-<p>列出所有可用块设备的信息并且显示它们之间的依赖关系的指令：<code>lsblk -f</code></p>
-<blockquote>
-<p>记：老师不离开</p>
-</blockquote>
-<p>硬盘分区：<code>fdisk /dev/sdb</code><br>选项：<br>m 显示命令列表<br>p 显示磁盘分区 同 fdisk –l<br>n 新增分区<br>d 删除分区<br>w 写入并退出<br>（示例说明：开始分区后输入n，新增分区，然后选择p，分区类型为主分区。两次回车默认剩余全部空间。最后输入w写入分区并退出，若不保存退出输入q）</p>
-<p>格式化分区：<code>mdfs -t ext4 /dev/sdb1</code> [把 /dev/sdb1 分区格式化为ext4这种类型]</p>
-<p>挂载：<code>mount /dev/sdb1 /home/newdisk</code> [注：挂载时(包括卸载umount时)，当前目录不要在/home/newdisk ]</p>
-<p>实现永久挂载，需要配置Linux的分区表，实现启动时，自动挂载：<code>vim /etc/fstab</code>，加入一行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;dev&#x2F;sdb1	&#x2F;home&#x2F;newdisk	ext4	defaults	0 0</span><br></pre></td></tr></table></figure>
-<p>添加后执行<code>mount -a</code>立即生效。</p>
-<p>查询系统整体磁盘使用情况：<code>df -h</code></p>
-<p>查询指定目录的磁盘占用情况（默认为当前目录）：<code>du -h 目录</code><br>其他参数：<br>-s 指定目录占用大小汇总<br>-h 带计量单位<br>-a 含文件<br>–max-depth=1 子目录深度<br>-c 列出明细的同时，增加汇总值</p>
-<p>实例：</p>
-<p>统计/home 文件夹下文件的个数：<code>ls –l /home/ | grep “^-” | wc -l</code><br>统计/home 文件夹下目录的个数：<code>ls –l /home/ | grep “^d” | wc -l</code><br>统计/home 文件夹下文件的个数，包括子文件夹里的：<code>ls –lR /home/ | grep “^-” | wc -l</code><br>统计/home 文件夹下目录的个数，包括子文件夹里的：<code>ls –lR /home/ | grep “^d” | wc -l</code><br>以树状显示目录结构：<code>tree</code></p>
-<h1 id="Linux网络配置"><a href="#Linux网络配置" class="headerlink" title="Linux网络配置"></a>Linux网络配置</h1><h2 id="配置固定的IP地址"><a href="#配置固定的IP地址" class="headerlink" title="配置固定的IP地址"></a>配置固定的IP地址</h2><p><code>vim /etc/sysconfig/network-scripts/ifcfg-eth0</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ONBOOT=yes</span><br><span class="line">BOOTPROTO=static <span class="comment">#以静态方式获取ip</span></span><br><span class="line">IPADDR=192.168.184.130 <span class="comment">#设置ip地址</span></span><br><span class="line">GATEWAY=192.168.184.2 <span class="comment">#网关</span></span><br><span class="line">DNS1=192.168.184.2 <span class="comment">#DNS和网关保持一致即可</span></span><br></pre></td></tr></table></figure>
-<p>保存后重启网络生效：<code>service network restart</code></p>
-<h2 id="修改主机名"><a href="#修改主机名" class="headerlink" title="修改主机名"></a>修改主机名</h2><p>查看当前主机名：<code>hostname</code></p>
-<p>修改Linux主机名：<code>vim /etc/hostname</code>，在文件里直接写入名字</p>
-<p>添加ip与主机的映射：<code>vim /etc/hosts</code>，加入一行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip地址	主机名</span><br></pre></td></tr></table></figure>
-
-
-<h1 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ol>
-<li>在Linux中，每个执行的程序（代码）都称为一个进程，每一个进程都分配一个ID号。</li>
-<li>每一个进程，都会对应一个父进程，而这个父进程可以复制多个子进程。</li>
-<li>每个进程都可能以两种方式存在的：前台与后台。所谓前台进程就是用户目前的屏幕上可以进行操作的。后台进程则是实际在操作，但由于屏幕上无法看到的进程，通常使用后台方式执行。</li>
-<li>一般系统的服务都是以后台进程的方式存在，而且都会常驻在系统中，直到关机才才结束。</li>
-</ol>
-<h2 id="查看进程"><a href="#查看进程" class="headerlink" title="查看进程"></a>查看进程</h2><p><code>ps -aux</code>：<br>-a: 显示当前终端的所有进程信息<br>-u: 以用户的格式显示进程信息<br>-x: 显示后台进程运行的参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">USER:用户名</span><br><span class="line">PID:进程ID</span><br><span class="line">%CPU:占用CPU的百分比</span><br><span class="line">%MEM:占用物理内存的百分比</span><br><span class="line">VSZ:占用的虚拟内存大小(KB)</span><br><span class="line">RSS:占用的物理内存大小(KB)</span><br><span class="line">TTY:使用终端</span><br><span class="line">STAT:进程的状态（S-睡眠，s-表示该进程是会话的先导进程，N-表示进程拥有比普通优先级更低的优先级，R-正在运行，D-短期等待，Z-僵死进程，T-被跟踪或者被停止等等）</span><br><span class="line">START:进程的启动时间</span><br><span class="line">TIME:进程使用CPU的总时间</span><br><span class="line">COMMAND:启动进程所用的命令和参数，如果过长会被截断显示，或者命令ps -ef 以全格式显示当前所有的进程</span><br></pre></td></tr></table></figure>
-<p>查找是否有某个进程：<code>ps -aux | grep xxx</code></p>
-<p>以全格式显示当前所有的进程：<code>ps -ef </code>（PPID可查看父进程；C为CPU用于计算执行优先级的因子，数值越大表明进程是CPU密集型运算，优先级降低，数值越小表明进程是I/O密集型运算，优先级提高）</p>
-<h2 id="终止进程"><a href="#终止进程" class="headerlink" title="终止进程"></a>终止进程</h2><p><code>kill [选项] 进程号</code>：通过进程号杀死进程，常用选项：<code>-9</code>，表示强制终止</p>
-<p><code>killall 进程名称</code>：通过进程名称杀死进程，也支持通配符，这在系统因负载过大而变得很慢时很有用</p>
-<h2 id="进程树"><a href="#进程树" class="headerlink" title="进程树"></a>进程树</h2><p><code>pstree</code>：以树状图的形式来显示进程</p>
-<p>选项：<br>-p :显示进程的PID<br>-u :显示进程的所属用户</p>
-<h2 id="服务管理"><a href="#服务管理" class="headerlink" title="服务管理"></a>服务管理</h2><p>服务(service)本质就是进程，但是运行在后台的，通常都会监听某个端口，等待其它程序的请求，比如(mysql,sshd,防火墙等)，因此又称为守护进程。</p>
-<p><strong>service管理指令：</strong><code>systemctl 服务名 [start|stop|restart|reload|status]</code></p>
-<p>监听某个端口是否在运行中：<code>telnet ip [端口]</code></p>
-<h2 id="查看服务名"><a href="#查看服务名" class="headerlink" title="查看服务名"></a>查看服务名</h2><p>方式1：<code>setup</code>进入系统服务<br>方式2：<code>ls -l /etc/init.d/</code>列出服务列表</p>
-<h2 id="运行级别-1"><a href="#运行级别-1" class="headerlink" title="运行级别"></a>运行级别</h2><p>查看或者修改默认级别： vim /etc/inittab<br>Linux系统有7种运行级别(runlevel)：常用的是级别3和5</p>
-<ul>
-<li>运行级别0：系统停机状态，系统默认运行级别不能设为0，否则不能正常启动</li>
-<li>运行级别1：单用户工作状态，root权限，用于系统维护，禁止远程登陆</li>
-<li>运行级别2：多用户状态(没有NFS)，不支持网络</li>
-<li>运行级别3：完全的多用户状态(有NFS)，登陆后进入控制台命令行模式</li>
-<li>运行级别4：系统未使用，保留</li>
-<li>运行级别5：X11控制台，登陆后进入图形GUI模式</li>
-<li>运行级别6：系统正常关闭并重启，默认运行级别不能设为6，否则不能正常启动</li>
-</ul>
-<h2 id="服务自启动"><a href="#服务自启动" class="headerlink" title="服务自启动"></a>服务自启动</h2><p>查看服务：<code>chkconfig --list | grep xxx</code>（用grep筛选想要的）</p>
-<p>通过服务名查看：<code>chkconfig xxx --list</code></p>
-<p>修改服务在某个级别下自启动：<code>chkconfig --level 5 xxx on/off</code></p>
-<p>若要在所有级别下都修改某个服务的自启动，不加level这个词：<code>chkconfig xxx on/off</code></p>
-<p><em>设计好之后，一定要<code>reboot</code>。</em></p>
-<h2 id="监控服务"><a href="#监控服务" class="headerlink" title="监控服务"></a>监控服务</h2><p><code>top</code>：</p>
-<p>选项：<br><code>-d 秒数</code>：指定top命令每隔几秒更新，默认是3秒。<br><code>-i</code>：使top不显示任何闲置或者僵死进程。<br><code>-p</code>：通过指定监控进程ID来仅仅监控某个进程的状态。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200825105051550.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDI2MjEyNg==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p>进入交互式模式后的操作：<br><code>P</code>：以CPU使用率排序，默认为此<br><code>M</code>：以内存的使用率排序<br><code>N</code>：以PID排序<br><code>q</code>：退出top<br><code>u</code>：再输入用户名，监视特定用户<br><code>k</code>：再输入进程ID号，终止指定的进程</p>
-<h2 id="监控网络服务"><a href="#监控网络服务" class="headerlink" title="监控网络服务"></a>监控网络服务</h2><p><code>netstat</code>：</p>
-<p>选项：<br>-an 按一定顺序排列输出<br>-p 显示哪个进程在调用</p>
-<h1 id="RPM包-amp-YUM管理"><a href="#RPM包-amp-YUM管理" class="headerlink" title="RPM包&amp;YUM管理"></a>RPM包&amp;YUM管理</h1><h2 id="RPM包"><a href="#RPM包" class="headerlink" title="RPM包"></a>RPM包</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3><p>一种用于互联网下载包的打包及安装工具，包含在某些Linux 分发版中，生成具有.RPM 扩展名的文件。RPM是RedHat Package Manage（r RedHat软件包管理工具）的缩写，类似windows的setup.exe，这一文件格式名称虽然打上了RedHat的标志，但理念是通用的。Linux的分发版本（suse,redhat,centos等等）都有采用，可以算是公认的行业标准了。</p>
-<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><ul>
-<li><code>rpm -qa</code> 查询所安装的所有rpm软件包</li>
-<li><code>rpm -qa | grep xxx</code> 查询具体某一个软件包</li>
-<li><code>rpm -q 软件包名</code> 查询该软件包是否安装</li>
-<li><code>rpm -qi 软件包名</code> 查询该软件包的信息</li>
-<li><code>rpm -ql 软件包名</code> 查询该软件安装后形成了哪些文件，这些文件放在哪些文件</li>
-<li><code>rpm -qf 文件全路径名</code> 查询某个文件属于哪个rpm包</li>
-</ul>
-<h3 id="RPM包名称基本格式"><a href="#RPM包名称基本格式" class="headerlink" title="RPM包名称基本格式"></a>RPM包名称基本格式</h3><p>一个rpm包名：firefox-45.0.1-1.el6.centos.x86_64.rpm</p>
-<ul>
-<li>名称：firefox</li>
-<li>版本号：45.0.1-1</li>
-<li>适用操作系统：el6.centos.x86_64，表示centos6.x的64位系统，如果是i686、i386表示32位系统，<strong>noarch表示通用</strong></li>
-</ul>
-<h3 id="卸载软件包"><a href="#卸载软件包" class="headerlink" title="卸载软件包"></a>卸载软件包</h3><ul>
-<li><code>rpm -e 软件包名</code> 卸载软件包</li>
-<li><code>rpm -e --nodeps 软件包名</code> 强制删除</li>
-</ul>
-<h3 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a>安装软件包</h3><p><code>rpm -ivh RPM包全路径名称</code></p>
-<p>参数说明：</p>
-<ul>
-<li>i=install 安装 </li>
-<li>v=verbose 提示 </li>
-<li>h=hash 进度条</li>
-</ul>
-<h2 id="YUM"><a href="#YUM" class="headerlink" title="YUM"></a>YUM</h2><p>yum是一个Shell软件包管理器，基于RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软件包。</p>
-<p><strong>yum的基本指令:</strong></p>
-<ul>
-<li><code>yum list|grep xx软件列表</code> 查询yum服务器是否有需要安装的软件</li>
-<li><code>yum install xxx</code> 安装指定的yum包（默认会安装最新版本的软件）</li>
-</ul>
-<h1 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h1><ul>
-<li><p>写出6个Linux常用命令：<code>netstat</code>, <code>top</code>, <code>lsblk</code>, <code>find</code>, <code>ps</code>, <code>chkconfig</code></p>
-</li>
-<li><p>查看内存：<code>top</code></p>
-</li>
-<li><p>磁盘存储：<code>df -lh</code></p>
-</li>
-<li><p>IO读写：<code>iotop</code></p>
-</li>
-<li><p>端口占用：<code>netstat -tunlp</code></p>
-</li>
-<li><p>进程：<code>ps -aux | grep xxx</code></p>
-</li>
-</ul>
-</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>大数据学习笔记——Linux相关操作</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="http://blog.cuper.top/2020/12/02/Linux_note/">http://blog.cuper.top/2020/12/02/Linux_note/</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a" style="display: inline-block;width: 120px"><h>作者</h><div class="post-copyright-cc-info"><h>Cuper</h></div></div><div class="post-copyright-c" style="display: inline-block;width: 120px"><h>发布于</h><div class="post-copyright-cc-info"><h>2020-12-02</h></div></div><div class="post-copyright-u" style="display: inline-block;width: 120px"><h>更新于</h><div class="post-copyright-cc-info"><h>2021-01-05</h></div></div><div class="post-copyright-c" style="display: inline-block;width: 120px"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY 4.0" href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><a class="post-meta__tags" href="/tags/MOOC%E7%AC%94%E8%AE%B0/">MOOC笔记</a><a class="post-meta__tags" href="/tags/Linux/">Linux</a></div><div class="post_share"><div class="social-share" data-image="http://img.cuper.top/java20201229203059.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/12/14/shell_Note/"><img class="prev-cover" src="http://img.cuper.top/bigdata20201216205038.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">大数据学习笔记——Shell入门</div></div></a></div><div class="next-post pull-right"><a href="/2020/11/01/BigData_Ch4_HBase/"><img class="next-cover" src="https://edu-image.nosdn.127.net/B8F9A8CFB977BD1C1DCCADDA97477DEE.jpg?imageView&amp;thumbnail=426y240&amp;quality=100" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">《大数据技术原理与应用》学习笔记——Ch4：分布式数据库HBase</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/12/14/shell_Note/" title="大数据学习笔记——Shell入门"><img class="cover" src="http://img.cuper.top/bigdata20201216205038.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-14</div><div class="title">大数据学习笔记——Shell入门</div></div></a></div><div><a href="/2020/09/04/BigData_Ch2/" title="《大数据技术原理与应用》学习笔记——Ch2：大数据处理架构Hadoop"><img class="cover" src="https://edu-image.nosdn.127.net/B8F9A8CFB977BD1C1DCCADDA97477DEE.jpg?imageView&thumbnail=426y240&quality=100" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-04</div><div class="title">《大数据技术原理与应用》学习笔记——Ch2：大数据处理架构Hadoop</div></div></a></div><div><a href="/2020/11/01/BigData_Ch4_HBase/" title="《大数据技术原理与应用》学习笔记——Ch4：分布式数据库HBase"><img class="cover" src="https://edu-image.nosdn.127.net/B8F9A8CFB977BD1C1DCCADDA97477DEE.jpg?imageView&thumbnail=426y240&quality=100" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-01</div><div class="title">《大数据技术原理与应用》学习笔记——Ch4：分布式数据库HBase</div></div></a></div><div><a href="/2020/09/12/BigData_Ch3_HDFS/" title="《大数据技术原理与应用》学习笔记——Ch3：分布式文件系统HDFS"><img class="cover" src="https://edu-image.nosdn.127.net/B8F9A8CFB977BD1C1DCCADDA97477DEE.jpg?imageView&thumbnail=426y240&quality=100" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-12</div><div class="title">《大数据技术原理与应用》学习笔记——Ch3：分布式文件系统HDFS</div></div></a></div><div><a href="/2021/01/22/Hadoop_ports/" title="Hadoop组件端口汇总"><img class="cover" src="http://img.cuper.top/java20210123211327.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-01-22</div><div class="title">Hadoop组件端口汇总</div></div></a></div><div><a href="/2020/09/18/HBase_setup/" title="HBase1.4.13完全分布式安装"><img class="cover" src="https://image.slidesharecdn.com/hbaseapachebigdataeu2015v01-150929094427-lva1-app6892/95/apache-big-data-eu-2015-hbase-8-638.jpg?cb=1443519928" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-18</div><div class="title">HBase1.4.13完全分布式安装</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Twikoo</span><span class="switch-btn"></span><span class="second-comment">Waline</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="http://img.cuper.top/asuka.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Cuper</div><div class="author-info__description">més que un pato</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">48</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/LeoPJ" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://space.bilibili.com/190287786" target="_blank" title="Bilibili"><i class="fab fa-youtube"></i></a><a class="social-icon" href="https://weibo.com/lmpxjy15" target="_blank" title="Weibo"><i class="fab fa-weibo"></i></a><a class="social-icon" href="http://instagram.com/cuper_yaya" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a><a class="social-icon" href="https://www.hust.edu.cn" target="_blank" title="HUST"><i class="fas fa-graduation-cap"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="toc-text">参考教程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux%E7%9A%84%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-text">Linux的文件目录结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vi%E5%92%8CVim%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">Vi和Vim编辑器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E4%B8%8E%E7%BB%84"><span class="toc-text">用户与组</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB"><span class="toc-text">运行级别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%BE%E5%9B%9Eroot%E5%AF%86%E7%A0%81"><span class="toc-text">找回root密码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-text">常用指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%AE%E5%8A%A9%E6%8C%87%E4%BB%A4"><span class="toc-text">帮助指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#man-%E5%91%BD%E4%BB%A4%E6%88%96%E8%80%85%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">man [命令或者配置文件]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#help-%E5%91%BD%E4%BB%A4"><span class="toc-text">help [命令]</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%B1%BB%E6%8C%87%E4%BB%A4"><span class="toc-text">文件目录类指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pwd"><span class="toc-text">pwd</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ls-%E9%80%89%E9%A1%B9-%E6%98%BE%E7%A4%BA%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95"><span class="toc-text">ls [选项] 显示当前目录下的文件和目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#touch-%E6%96%87%E4%BB%B6%E5%90%8D-%E6%96%87%E4%BB%B6%E5%90%8D-%E2%80%A6%E2%80%A6"><span class="toc-text">touch [文件名] [文件名] ……</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rm-rf-%E7%A9%BA%E7%9B%AE%E5%BD%95%E6%88%96%E8%80%85%E9%9D%9E%E7%A9%BA%E7%9B%AE%E5%BD%95"><span class="toc-text">rm -rf [空目录或者非空目录]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cat-%E9%80%89%E9%A1%B9-n%E8%A1%A8%E7%A4%BA%E6%98%BE%E7%A4%BA%E8%A1%8C%E5%8F%B7-%E8%A6%81%E6%9F%A5%E7%9C%8B%E7%9A%84%E6%96%87%E4%BB%B6"><span class="toc-text">cat [选项 -n表示显示行号] 要查看的文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#more-%E6%96%87%E4%BB%B6%E5%90%8D"><span class="toc-text">more [文件名]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#less-%E6%96%87%E4%BB%B6%E5%90%8D"><span class="toc-text">less [文件名]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gt-%E4%B8%8E-gt-gt"><span class="toc-text">&gt;与&gt;&gt;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#echo-PATH"><span class="toc-text">echo $PATH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#head-n-%E8%A1%8C%E6%95%B0-%E6%96%87%E4%BB%B6"><span class="toc-text">head [-n 行数] [文件]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tail-n-%E8%A1%8C%E6%95%B0-%E6%96%87%E4%BB%B6"><span class="toc-text">tail [-n 行数] [文件]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ln-s-%E5%8E%9F%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95-%E8%BD%AF%E9%93%BE%E6%8E%A5%E5%90%8D"><span class="toc-text">ln -s [原文件或目录] [软链接名]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#history"><span class="toc-text">history</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E6%9F%A5%E6%89%BE%E7%B1%BB"><span class="toc-text">搜索查找类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#find-%E6%90%9C%E7%B4%A2%E8%8C%83%E5%9B%B4-%E9%80%89%E9%A1%B9-%E6%96%87%E4%BB%B6"><span class="toc-text">find [搜索范围] [选项] [文件]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#locate-%E6%96%87%E4%BB%B6%E5%90%8D"><span class="toc-text">locate [文件名]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grep-%E4%B8%8E%E7%AE%A1%E9%81%93%E7%AC%A6%E2%80%9C-%E2%80%9D"><span class="toc-text">grep 与管道符“|”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%B1%BB"><span class="toc-text">压缩和解压类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#gzip%E4%B8%8Egunzip%EF%BC%88%E4%BC%9A%E5%88%A0%E9%99%A4%E5%8E%9F%E6%96%87%E4%BB%B6%EF%BC%89"><span class="toc-text">gzip与gunzip（会删除原文件）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#zip%E4%B8%8Eunzip"><span class="toc-text">zip与unzip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tar"><span class="toc-text">tar</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86"><span class="toc-text">文件权限管理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6"><span class="toc-text">任务调度</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E4%B8%8E%E6%8C%82%E8%BD%BD"><span class="toc-text">磁盘分区与挂载</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%8C%BA%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-text">分区的方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mbr%E5%88%86%E5%8C%BA%EF%BC%9A"><span class="toc-text">mbr分区：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gpt%E5%88%86%E5%8C%BA%EF%BC%88%E2%9C%94%EF%BC%89%EF%BC%9A"><span class="toc-text">gpt分区（✔）：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E4%B8%8EWindows%E5%88%86%E5%8C%BA%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">Linux与Windows分区的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E4%B8%8B%E7%A3%81%E7%9B%98%E7%9A%84%E8%AF%B4%E6%98%8E"><span class="toc-text">Linux下磁盘的说明</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE"><span class="toc-text">Linux网络配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%9B%BA%E5%AE%9A%E7%9A%84IP%E5%9C%B0%E5%9D%80"><span class="toc-text">配置固定的IP地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D"><span class="toc-text">修改主机名</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86"><span class="toc-text">进程管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B"><span class="toc-text">查看进程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%88%E6%AD%A2%E8%BF%9B%E7%A8%8B"><span class="toc-text">终止进程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E6%A0%91"><span class="toc-text">进程树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86"><span class="toc-text">服务管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%9C%8D%E5%8A%A1%E5%90%8D"><span class="toc-text">查看服务名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB-1"><span class="toc-text">运行级别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E8%87%AA%E5%90%AF%E5%8A%A8"><span class="toc-text">服务自启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%91%E6%8E%A7%E6%9C%8D%E5%8A%A1"><span class="toc-text">监控服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%91%E6%8E%A7%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1"><span class="toc-text">监控网络服务</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#RPM%E5%8C%85-amp-YUM%E7%AE%A1%E7%90%86"><span class="toc-text">RPM包&amp;YUM管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#RPM%E5%8C%85"><span class="toc-text">RPM包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5-1"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2"><span class="toc-text">查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RPM%E5%8C%85%E5%90%8D%E7%A7%B0%E5%9F%BA%E6%9C%AC%E6%A0%BC%E5%BC%8F"><span class="toc-text">RPM包名称基本格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-text">卸载软件包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="toc-text">安装软件包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#YUM"><span class="toc-text">YUM</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="toc-text">面试题</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/02/10/update_butterfly_3.6.2/" title="Butterfly3.6.2升级笔记"><img src="http://img.cuper.top/java20210214221750.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Butterfly3.6.2升级笔记"/></a><div class="content"><a class="title" href="/2021/02/10/update_butterfly_3.6.2/" title="Butterfly3.6.2升级笔记">Butterfly3.6.2升级笔记</a><time datetime="2021-02-09T16:00:00.000Z" title="发表于 2021-02-10 00:00:00">2021-02-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/03/database_leetcode/" title="Leetcode刷题——数据库专题（非会员题目合集）"><img src="http://img.cuper.top/java20210202230634.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Leetcode刷题——数据库专题（非会员题目合集）"/></a><div class="content"><a class="title" href="/2021/02/03/database_leetcode/" title="Leetcode刷题——数据库专题（非会员题目合集）">Leetcode刷题——数据库专题（非会员题目合集）</a><time datetime="2021-02-02T16:00:00.000Z" title="发表于 2021-02-03 00:00:00">2021-02-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/01/shell_leetcode/" title="Leetcode刷题——shell专题（No.192-195）"><img src="http://img.cuper.top/java20210202230634.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Leetcode刷题——shell专题（No.192-195）"/></a><div class="content"><a class="title" href="/2021/02/01/shell_leetcode/" title="Leetcode刷题——shell专题（No.192-195）">Leetcode刷题——shell专题（No.192-195）</a><time datetime="2021-01-31T16:00:00.000Z" title="发表于 2021-02-01 00:00:00">2021-02-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/30/Java_Exception/" title="Java学习笔记（九）——异常"><img src="http://icons.iconarchive.com/icons/alecive/flatwoken/512/Apps-Java-icon.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java学习笔记（九）——异常"/></a><div class="content"><a class="title" href="/2021/01/30/Java_Exception/" title="Java学习笔记（九）——异常">Java学习笔记（九）——异常</a><time datetime="2021-01-29T16:00:00.000Z" title="发表于 2021-01-30 00:00:00">2021-01-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/27/Java_OOP_other/" title="Java学习笔记（八）——面向对象（static、抽象类、接口、内部类）"><img src="http://icons.iconarchive.com/icons/alecive/flatwoken/512/Apps-Java-icon.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java学习笔记（八）——面向对象（static、抽象类、接口、内部类）"/></a><div class="content"><a class="title" href="/2021/01/27/Java_OOP_other/" title="Java学习笔记（八）——面向对象（static、抽象类、接口、内部类）">Java学习笔记（八）——面向对象（static、抽象类、接口、内部类）</a><time datetime="2021-01-26T16:00:00.000Z" title="发表于 2021-01-27 00:00:00">2021-01-27</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Cuper</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/"><img class="icp-icon" src="/img/icp.png"><span>粤ICP备20047377号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>大数据可视化技术调研报告</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="http://blog.cuper.top/2021/01/24/big_data_vis/">http://blog.cuper.top/2021/01/24/big_data_vis/</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a" style="display: inline-block;width: 120px"><h>作者</h><div class="post-copyright-cc-info"><h>Cuper</h></div></div><div class="post-copyright-c" style="display: inline-block;width: 120px"><h>发布于</h><div class="post-copyright-cc-info"><h>2021-01-24</h></div></div><div class="post-copyright-u" style="display: inline-block;width: 120px"><h>更新于</h><div class="post-copyright-cc-info"><h>2021-02-24</h></div></div><div class="post-copyright-c" style="display: inline-block;width: 120px"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY 4.0" href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><a class="post-meta__tags" href="/tags/Hadoop/">Hadoop</a><a class="post-meta__tags" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/">可视化</a></div><div class="post_share"><div class="social-share" data-image="http://img.cuper.top/java20210224002854.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/01/27/Java_OOP_other/"><img class="prev-cover" src="http://icons.iconarchive.com/icons/alecive/flatwoken/512/Apps-Java-icon.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Java学习笔记（八）——面向对象（static、抽象类、接口、内部类）</div></div></a></div><div class="next-post pull-right"><a href="/2021/01/22/Hadoop_ports/"><img class="next-cover" src="http://img.cuper.top/java20210123211327.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hadoop组件端口汇总</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/09/04/BigData_Ch2/" title="《大数据技术原理与应用》学习笔记——Ch2：大数据处理架构Hadoop"><img class="cover" src="https://edu-image.nosdn.127.net/B8F9A8CFB977BD1C1DCCADDA97477DEE.jpg?imageView&thumbnail=426y240&quality=100" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-04</div><div class="title">《大数据技术原理与应用》学习笔记——Ch2：大数据处理架构Hadoop</div></div></a></div><div><a href="/2021/01/22/Hadoop_ports/" title="Hadoop组件端口汇总"><img class="cover" src="http://img.cuper.top/java20210123211327.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-01-22</div><div class="title">Hadoop组件端口汇总</div></div></a></div><div><a href="/2020/09/18/HBase_setup/" title="HBase1.4.13完全分布式安装"><img class="cover" src="https://image.slidesharecdn.com/hbaseapachebigdataeu2015v01-150929094427-lva1-app6892/95/apache-big-data-eu-2015-hbase-8-638.jpg?cb=1443519928" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-18</div><div class="title">HBase1.4.13完全分布式安装</div></div></a></div><div><a href="/2020/07/22/Spark2.4_setup/" title="Spark2.4.6安装教程"><img class="cover" src="http://spark.apache.org/images/spark-logo-trademark.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-07-22</div><div class="title">Spark2.4.6安装教程</div></div></a></div><div><a href="/2020/09/18/ZooKeeper_setup/" title="ZooKeeper3.4.14完全分布式安装"><img class="cover" src="https://2xbbhjxc6wk3v21p62t8n4d4-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/zookeeper.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-18</div><div class="title">ZooKeeper3.4.14完全分布式安装</div></div></a></div><div><a href="/2020/11/01/BigData_Ch4_HBase/" title="《大数据技术原理与应用》学习笔记——Ch4：分布式数据库HBase"><img class="cover" src="https://edu-image.nosdn.127.net/B8F9A8CFB977BD1C1DCCADDA97477DEE.jpg?imageView&thumbnail=426y240&quality=100" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-01</div><div class="title">《大数据技术原理与应用》学习笔记——Ch4：分布式数据库HBase</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Twikoo</span><span class="switch-btn"></span><span class="second-comment">Waline</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="http://img.cuper.top/asuka.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Cuper</div><div class="author-info__description">més que un pato</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">48</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/LeoPJ" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://space.bilibili.com/190287786" target="_blank" title="Bilibili"><i class="fab fa-youtube"></i></a><a class="social-icon" href="https://weibo.com/lmpxjy15" target="_blank" title="Weibo"><i class="fab fa-weibo"></i></a><a class="social-icon" href="http://instagram.com/cuper_yaya" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a><a class="social-icon" href="https://www.hust.edu.cn" target="_blank" title="HUST"><i class="fas fa-graduation-cap"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82%EF%BC%88%E6%8B%9F%E5%AE%9A%EF%BC%89"><span class="toc-text">功能需求（拟定）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%A7%E6%95%B0%E6%8D%AEVS%E4%BC%A0%E7%BB%9F%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">大数据VS传统可视化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7"><span class="toc-text">数据可视化工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B1%87%E6%80%BB"><span class="toc-text">汇总</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E5%88%86%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7"><span class="toc-text">部分开源工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#D3-js"><span class="toc-text">D3.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#plotly"><span class="toc-text">plotly</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RawGraphs"><span class="toc-text">RawGraphs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Candela"><span class="toc-text">Candela</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sigmajs"><span class="toc-text">Sigmajs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AntV"><span class="toc-text">AntV</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ECharts"><span class="toc-text">ECharts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#D3-js%E4%B8%8EECharts%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-text">D3.js与ECharts的对比</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#D3-js%EF%BC%88%E5%9F%BA%E4%BA%8ESVG%EF%BC%89"><span class="toc-text">D3.js（基于SVG）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ECharts%EF%BC%88%E5%9F%BA%E4%BA%8Ecanvas%EF%BC%89"><span class="toc-text">ECharts（基于canvas）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%83%A8%E5%88%86%E4%BA%92%E8%81%94%E7%BD%91%E5%85%AC%E5%8F%B8%E7%9A%84%E5%95%86%E7%94%A8%E4%BA%A7%E5%93%81"><span class="toc-text">部分互联网公司的商用产品</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#RayData"><span class="toc-text">RayData</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sugar"><span class="toc-text">Sugar</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DataV"><span class="toc-text">DataV</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E6%98%93%E6%9C%89%E6%95%B0"><span class="toc-text">网易有数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FineBI"><span class="toc-text">FineBI</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84%EF%BC%9A"><span class="toc-text">技术架构：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="toc-text">适用范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B0%B4%E5%B9%B3"><span class="toc-text">可视化水平</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%AF%94"><span class="toc-text">对比</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8EHadoop%E7%9A%84%E5%BC%80%E6%BA%90%E5%8F%AF%E8%A7%86%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="toc-text">基于Hadoop的开源可视化项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Superset"><span class="toc-text">Superset</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%94%AF%E6%8C%81"><span class="toc-text">数据库支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A7%E5%93%81%E7%BB%93%E6%9E%84"><span class="toc-text">产品结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E6%9E%B6%E6%9E%84"><span class="toc-text">开发架构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF"><span class="toc-text">后端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF"><span class="toc-text">前端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-text">局限性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B0%B4%E5%B9%B3-1"><span class="toc-text">可视化水平</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E6%96%87%E6%A1%A3"><span class="toc-text">支持文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-1"><span class="toc-text">适用范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-text">参考</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Metabase"><span class="toc-text">Metabase</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E6%9E%B6%E6%9E%84-1"><span class="toc-text">开发架构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF-1"><span class="toc-text">前端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF-1"><span class="toc-text">后端</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%BA%90"><span class="toc-text">数据源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B0%B4%E5%B9%B3-2"><span class="toc-text">可视化水平</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-2"><span class="toc-text">适用范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E8%AF%84%E4%BB%B7"><span class="toc-text">用户评价</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83-1"><span class="toc-text">参考</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redash"><span class="toc-text">Redash</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E6%9E%B6%E6%9E%84-2"><span class="toc-text">开发架构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF-2"><span class="toc-text">后端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF-2"><span class="toc-text">前端</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%BA%90-1"><span class="toc-text">数据源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96%E6%B0%B4%E5%B9%B3-3"><span class="toc-text">可视化水平</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-3"><span class="toc-text">适用范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83-2"><span class="toc-text">参考</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Zeppelin"><span class="toc-text">Zeppelin</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84"><span class="toc-text">开发技术架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-4"><span class="toc-text">适用范围</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">可视化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96%E6%80%9D%E8%B7%AF%E6%80%BB%E7%BB%93"><span class="toc-text">可视化思路总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83-3"><span class="toc-text">参考</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/02/10/update_butterfly_3.6.2/" title="Butterfly3.6.2升级笔记"><img src="http://img.cuper.top/java20210214221750.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Butterfly3.6.2升级笔记"/></a><div class="content"><a class="title" href="/2021/02/10/update_butterfly_3.6.2/" title="Butterfly3.6.2升级笔记">Butterfly3.6.2升级笔记</a><time datetime="2021-02-09T16:00:00.000Z" title="发表于 2021-02-10 00:00:00">2021-02-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/03/database_leetcode/" title="Leetcode刷题——数据库专题（非会员题目合集）"><img src="http://img.cuper.top/java20210202230634.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Leetcode刷题——数据库专题（非会员题目合集）"/></a><div class="content"><a class="title" href="/2021/02/03/database_leetcode/" title="Leetcode刷题——数据库专题（非会员题目合集）">Leetcode刷题——数据库专题（非会员题目合集）</a><time datetime="2021-02-02T16:00:00.000Z" title="发表于 2021-02-03 00:00:00">2021-02-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/01/shell_leetcode/" title="Leetcode刷题——shell专题（No.192-195）"><img src="http://img.cuper.top/java20210202230634.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Leetcode刷题——shell专题（No.192-195）"/></a><div class="content"><a class="title" href="/2021/02/01/shell_leetcode/" title="Leetcode刷题——shell专题（No.192-195）">Leetcode刷题——shell专题（No.192-195）</a><time datetime="2021-01-31T16:00:00.000Z" title="发表于 2021-02-01 00:00:00">2021-02-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/30/Java_Exception/" title="Java学习笔记（九）——异常"><img src="http://icons.iconarchive.com/icons/alecive/flatwoken/512/Apps-Java-icon.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java学习笔记（九）——异常"/></a><div class="content"><a class="title" href="/2021/01/30/Java_Exception/" title="Java学习笔记（九）——异常">Java学习笔记（九）——异常</a><time datetime="2021-01-29T16:00:00.000Z" title="发表于 2021-01-30 00:00:00">2021-01-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/27/Java_OOP_other/" title="Java学习笔记（八）——面向对象（static、抽象类、接口、内部类）"><img src="http://icons.iconarchive.com/icons/alecive/flatwoken/512/Apps-Java-icon.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java学习笔记（八）——面向对象（static、抽象类、接口、内部类）"/></a><div class="content"><a class="title" href="/2021/01/27/Java_OOP_other/" title="Java学习笔记（八）——面向对象（static、抽象类、接口、内部类）">Java学习笔记（八）——面向对象（static、抽象类、接口、内部类）</a><time datetime="2021-01-26T16:00:00.000Z" title="发表于 2021-01-27 00:00:00">2021-01-27</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Cuper</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="http://www.beian.miit.gov.cn/"><img class="icp-icon" src="/img/icp.png"><span>粤ICP备20047377号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
   if (typeof pangu === 'object') pangu.autoSpacingPage()
   else {
     getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
