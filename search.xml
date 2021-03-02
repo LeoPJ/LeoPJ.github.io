@@ -409,9 +409,9 @@
             
             <tag> MOOC笔记 </tag>
             
-            <tag> Shell </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> Shell </tag>
             
         </tags>
       
@@ -467,11 +467,11 @@
             
             <tag> 大数据 </tag>
             
+            <tag> HBase </tag>
+            
             <tag> Hadoop </tag>
             
             <tag> MOOC笔记 </tag>
-            
-            <tag> HBase </tag>
             
         </tags>
       
@@ -562,9 +562,9 @@
             
             <tag> 大数据 </tag>
             
-            <tag> Hadoop </tag>
-            
             <tag> HBase </tag>
+            
+            <tag> Hadoop </tag>
             
             <tag> 安装 </tag>
             
